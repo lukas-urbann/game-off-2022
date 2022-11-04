@@ -7,7 +7,6 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
-/[Ll]ogs/
 /[Mm]emoryCaptures/
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
@@ -64,6 +63,7 @@ crashlytics-build.properties
 [Aa]ssets/AssetStoreTools*
 [Bb]uild/
 [Ll]ibrary/
+[Ll]ogs/
 [Ll]ocal[Cc]ache/
 [Oo]bj/
 [Tt]emp/
@@ -99,4 +99,3 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
-*.log
