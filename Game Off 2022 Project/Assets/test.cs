@@ -7,5 +7,6 @@ public class test : MonoBehaviour
         Application.Quit();
 
         Debug.Log("funny black people");
+        print("funny n word");
     }
 }
