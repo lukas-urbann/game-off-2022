@@ -100,3 +100,20 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 Thumbs.db
+
+# Packed Addressables
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+
+# Temporary auto-generated Android Assets
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+Game Off 2022 Project/Logs/AssetImportWorker0-prev.log
+Game Off 2022 Project/Logs/AssetImportWorker0.log
+Game Off 2022 Project/Logs/AssetImportWorker1-prev.log
+Game Off 2022 Project/Logs/AssetImportWorker1.log
+Game Off 2022 Project/Logs/shadercompiler-AssetImportWorker0.log
+Game Off 2022 Project/Logs/shadercompiler-UnityShaderCompiler.exe1.log
+Game Off 2022 Project/Logs/shadercompiler-UnityShaderCompiler.exe2.log
+Game Off 2022 Project/Logs/shadercompiler-UnityShaderCompiler.exe3.log
+Game Off 2022 Project/Logs/shadercompiler-UnityShaderCompiler.exe4.log
