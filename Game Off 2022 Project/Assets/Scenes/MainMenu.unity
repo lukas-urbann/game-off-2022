@@ -1754,6 +1754,7 @@ GameObject:
   - component: {fileID: 4386438584666508639}
   - component: {fileID: 824186435456353018}
   - component: {fileID: 3212454649089144368}
+  - component: {fileID: 4386438584666508640}
   m_Layer: 7
   m_Name: Ceiling Lights
   m_TagString: Object
@@ -1778,3 +1779,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -28.354}
+--- !u!114 &4386438584666508640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4004845809755297765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489b4283a75b5cb4eb5dcf204aa12fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minTimer: 0.1
+  maxTimer: 1
+  lights:
+  - {fileID: 870141576}
+  - {fileID: 407022653}
