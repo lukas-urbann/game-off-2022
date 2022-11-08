@@ -23,6 +23,7 @@ namespace Scenes
                 Instance = this;
             
             AddCliches("Ask not what your country can do for you, but what you can do for your country");
+            AddCliches("When you die, it's for a long time");
             AddCliches("Better to remain silent and be thought a fool that to speak and remove all doubt");
             AddCliches("Build a better mousetrap and the world will beat a path to your door");
             AddCliches("Eye of newt and toe of frog, wool of bat and tongue of dog");
