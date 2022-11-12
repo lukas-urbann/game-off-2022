@@ -1,6 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using Singletons;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,18 +14,23 @@ namespace Game.UI
             clickColor = new Color(0.9f,0.82f,0.16f, 1);
         
         [SerializeField] private TMP_Text text;
+        [SerializeField] private bool playSounds = true;
 
         private void Start()
         {
-            if(text == null)
+            if(text != null)
+                text.color = baseColor;
+            else
                 text = GetComponentInChildren(typeof(TMP_Text), true) as TMP_Text;
-                
-            text.color = baseColor;
+            
         }
 
         public void OnPointerEnter(PointerEventData eventData)
         {
             text.color = hoverColor;
+
+            if (CheckSFXController())
+                SFXController.Instance.Button_PlayHover();
         }
         
         public void OnPointerExit(PointerEventData eventData)
@@ -37,11 +41,24 @@ namespace Game.UI
         public void OnPointerDown(PointerEventData eventData)
         {
             text.color = clickColor;
+            
+            if (CheckSFXController())
+                SFXController.Instance.Button_PlayClick();
         }
         
         public void OnPointerUp(PointerEventData eventData)
         {
             text.color = baseColor;
+        }
+
+        // ReSharper disable once InconsistentNaming
+        private bool CheckSFXController()
+        {
+            if(playSounds)
+                if (SFXController.Instance != null)
+                    return true;
+
+            return false;
         }
     }
 }
