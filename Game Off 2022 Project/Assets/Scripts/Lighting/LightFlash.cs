@@ -1,13 +1,15 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using Game.Utility;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using Singletons;
 
 namespace Lighting
 {
     public class LightFlash : MonoBehaviour
     {
+        public AudioClip flashSound;
         public float minTimer, maxTimer;
         public float flashIntensity;
         private float flashTimer;
@@ -32,6 +34,8 @@ namespace Lighting
 
         private void FlashLights()
         {
+            PlayFlashSound();
+            
             foreach (Light light in lights)
             {
                 if (litUp[lights.IndexOf(light)] == 0)
@@ -45,6 +49,12 @@ namespace Lighting
                     litUp[lights.IndexOf(light)] = 0;
                 }
             }
+        }
+
+        private void PlayFlashSound()
+        {
+            if (BooleanChecker.CheckSFXController())
+                SFXController.Instance.PlaySoundEffect(flashSound);
         }
     }
 }

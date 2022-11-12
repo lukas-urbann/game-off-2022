@@ -1,4 +1,5 @@
 using System;
+using Game.Utility;
 using Singletons;
 using TMPro;
 using UnityEngine;
@@ -29,7 +30,7 @@ namespace Game.UI
         {
             text.color = hoverColor;
 
-            if (CheckSFXController())
+            if (BooleanChecker.CheckSFXController() && playSounds)
                 SFXController.Instance.Button_PlayHover();
         }
         
@@ -42,23 +43,13 @@ namespace Game.UI
         {
             text.color = clickColor;
             
-            if (CheckSFXController())
+            if (BooleanChecker.CheckSFXController() && playSounds)
                 SFXController.Instance.Button_PlayClick();
         }
         
         public void OnPointerUp(PointerEventData eventData)
         {
             text.color = baseColor;
-        }
-
-        // ReSharper disable once InconsistentNaming
-        private bool CheckSFXController()
-        {
-            if(playSounds)
-                if (SFXController.Instance != null)
-                    return true;
-
-            return false;
         }
     }
 }
