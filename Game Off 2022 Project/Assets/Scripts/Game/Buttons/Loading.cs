@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using Scenes;
 using UnityEngine;
 
 namespace Game.Buttons
 {
-    public class ExitButton : MonoBehaviour
+    public class Loading : MonoBehaviour
     {
         private enum Type
         {

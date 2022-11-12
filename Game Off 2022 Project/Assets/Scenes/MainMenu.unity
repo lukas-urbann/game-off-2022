@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 547809526}
   - component: {fileID: 547809525}
   m_Layer: 0
-  m_Name: (Temp) SFX Manager
+  m_Name: SFX Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1825,7 +1825,7 @@ GameObject:
   - component: {fileID: 1512018969}
   - component: {fileID: 1512018968}
   m_Layer: 0
-  m_Name: (Temp) Background Music
+  m_Name: Background Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

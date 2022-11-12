@@ -1,7 +1,7 @@
+using TMPro;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -18,27 +18,26 @@ namespace Scenes
         private void Awake()
         {
             if (Instance != null && Instance != this)
+            {
                 Destroy(gameObject);
+            }
             else
+            {
                 Instance = this;
-            
-            AddCliches("Ask not what your country can do for you, but what you can do for your country");
-            AddCliches("When you die, it's for a long time");
-            AddCliches("Better to remain silent and be thought a fool that to speak and remove all doubt");
-            AddCliches("Build a better mousetrap and the world will beat a path to your door");
-            AddCliches("Eye of newt and toe of frog, wool of bat and tongue of dog");
-            AddCliches("Fie, fi, foh, fum, I smell the blood of an englishman");
+            }
+
+            clicheString.Add("Ask not what your country can do for you, but what you can do for your country");
+            clicheString.Add("When you die, it's for a long time");
+            clicheString.Add("Better to remain silent and be thought a fool that to speak and remove all doubt");
+            clicheString.Add("Build a better mousetrap and the world will beat a path to your door");
+            clicheString.Add("Eye of newt and toe of frog, wool of bat and tongue of dog");
+            clicheString.Add("Fie, fi, foh, fum, I smell the blood of an englishman");
         }
 
         public void StartLoading(string sceneName)
         {
-            ChooseTip();
-            StartCoroutine(PreLoadAction(sceneName));
-        }
-
-        private void ChooseTip()
-        {
             tipOfTheDay.text = clicheString[Random.Range(0, clicheString.Count - 1)];
+            StartCoroutine(PreLoadAction(sceneName));
         }
         
         private IEnumerator LoadAsynchronously(string levelName)
@@ -48,25 +47,15 @@ namespace Scenes
             {
                 Time.timeScale = 1;
                 yield return null;
-                SetActiveStates(false);
+                loadingScreenGameObject.SetActive(false);
             }
         }
 
         private IEnumerator PreLoadAction(string sceneName)
         {
-            SetActiveStates(true);
+            loadingScreenGameObject.SetActive(true);
             yield return new WaitForSeconds(3f);
             StartCoroutine(LoadAsynchronously(sceneName));
-        }
-
-        private void SetActiveStates(bool status)
-        {
-            loadingScreenGameObject.SetActive(status);
-        }
-
-        private void AddCliches(string cliche)
-        {
-            clicheString.Add(cliche);
         }
     }
 }
