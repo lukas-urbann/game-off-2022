@@ -3,9 +3,11 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class InputSystemFirstPersonCharacter : MonoBehaviour
 {
-    private InputSystemFirstPersonControls inputActions;
+    [Header("Input system")]
+    [SerializeField] private InputSystemFirstPersonControls inputActions;
 
     private CharacterController controller;
+    private Rigidbody rb;
 
     [Header("Camera")]
     [SerializeField] private Camera cam;
@@ -16,6 +18,8 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
 
     [Header("Movement")]
     public float gravity = -9.81f;
+    [SerializeField] private float sprintMultiplier = 2f;
+    [SerializeField] private float jumpMultiplier = 2f;
     private bool grounded;  
     private Vector3 velocity;
 
@@ -35,6 +39,7 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
     }
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
         controller = GetComponent<CharacterController>();
         initHeight = controller.height;
         Cursor.lockState = CursorLockMode.Locked;
@@ -49,10 +54,19 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
 
     private void Update()
     {
+        if (!DoPause())
+        {
+
+        }
         DoMovement();
         DoLooking();
         DoZoom();
         DoCrouch();
+    }
+
+    private bool DoPause()
+    {
+        return true;
     }
 
     private void DoLooking()
@@ -79,10 +93,23 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
 
         Vector2 movement = GetPlayerMovement();
         Vector3 move = transform.right * movement.x + transform.forward * movement.y;
-        controller.Move(move * movementSpeed * Time.deltaTime);
+        if (inputActions.FPSController.Sprint.ReadValue<float>() > 0)
+        {
+            controller.Move(move * movementSpeed * Time.deltaTime * sprintMultiplier);
+        }
+        else
+        {
+            controller.Move(move * movementSpeed * Time.deltaTime);
+        }
 
+        
         velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        controller.Move(velocity * Time.deltaTime); 
+        if (inputActions.FPSController.Jump.IsPressed() && grounded)
+        {
+            controller.Move(Vector3.up * jumpMultiplier * Time.deltaTime);
+            //rb.AddForce(Vector3.up * jumpMultiplier, ForceMode.Impulse);
+        }
     }
 
     private void DoZoom()

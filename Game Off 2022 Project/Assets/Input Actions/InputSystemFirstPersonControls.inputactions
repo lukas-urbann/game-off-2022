@@ -1,5 +1,5 @@
 {
-    "name": "NewInputFirstPersonControls",
+    "name": "InputSystemFirstPersonControls",
     "maps": [
         {
             "name": "FPSController",
@@ -11,7 +11,8 @@
                     "id": "6e44727f-40d2-41de-9df8-ef9c859bb7f5",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Look",
@@ -19,7 +20,8 @@
                     "id": "5199bef6-c81b-4c89-a767-9d8947696c32",
                     "expectedControlType": "Vector2",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Zoom",
@@ -27,7 +29,8 @@
                     "id": "0998abb7-9fab-4ed8-840b-668f6a9d41f7",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "Crouch",
@@ -35,7 +38,8 @@
                     "id": "c863efc0-5558-4bfd-9e1f-2f090a5f5683",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
                     "name": "PauseMenu",
@@ -43,7 +47,26 @@
                     "id": "a5ad4849-694e-45e5-818f-a2eb7914c14d",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": "Press"
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Sprint",
+                    "type": "Button",
+                    "id": "6761960b-b56a-42f1-aafb-70f8ce247aac",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "921b351b-3138-4d93-94e7-a542e2ab5675",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -242,6 +265,39 @@
                     "processors": "",
                     "groups": "FPSControllerInputs",
                     "action": "PauseMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb8b17bd-c15f-465d-afe3-a53895639279",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "FPSControllerInputs",
+                    "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bdac87c6-200c-439c-9563-fba59cd6ce18",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "FPSControllerInputs",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e83a4215-e201-4cdd-ad3e-f72dc3234bf3",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "FPSControllerInputs",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
