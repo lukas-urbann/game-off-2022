@@ -33,12 +33,21 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
     [SerializeField] private float crouchHeight;
     private float initHeight;
 
+    [Header("Pause")]
+    [SerializeField] private GameObject menuObj;
+    private bool isPaused = false;
+
     private void Awake()
     {
         inputActions = new InputSystemFirstPersonControls();
     }
+
     private void Start()
     {
+        if (menuObj == null)
+        {
+            menuObj = GameObject.Find("PauseUI");
+        }
         rb = GetComponent<Rigidbody>();
         controller = GetComponent<CharacterController>();
         initHeight = controller.height;
@@ -56,7 +65,24 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
     {
         if (!DoPause())
         {
-
+            if (isPaused)
+            {
+                menuObj.SetActive(false);
+                Time.timeScale = 1;
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
+            else
+            {
+                menuObj.SetActive(true);
+                Time.timeScale = 0;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.Confined;
+            }
+        }
+        if (isPaused)
+        {
+            return;
         }
         DoMovement();
         DoLooking();
@@ -66,7 +92,11 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
 
     private bool DoPause()
     {
-        return true;
+        if (inputActions.FPSController.Jump.IsPressed())
+        {
+            return true;
+        }
+        return false;
     }
 
     private void DoLooking()
