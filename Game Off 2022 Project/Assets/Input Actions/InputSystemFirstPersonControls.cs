@@ -89,6 +89,15 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""238d69ba-8c03-4253-b736-9ee6262d4b52"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -322,6 +331,17 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""878943bd-9bfe-470b-b8e8-4bbe35778344"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""FPSControllerInputs"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -359,6 +379,7 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         m_FPSController_PauseMenu = m_FPSController.FindAction("PauseMenu", throwIfNotFound: true);
         m_FPSController_Sprint = m_FPSController.FindAction("Sprint", throwIfNotFound: true);
         m_FPSController_Jump = m_FPSController.FindAction("Jump", throwIfNotFound: true);
+        m_FPSController_Pause = m_FPSController.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -425,6 +446,7 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
     private readonly InputAction m_FPSController_PauseMenu;
     private readonly InputAction m_FPSController_Sprint;
     private readonly InputAction m_FPSController_Jump;
+    private readonly InputAction m_FPSController_Pause;
     public struct FPSControllerActions
     {
         private @InputSystemFirstPersonControls m_Wrapper;
@@ -436,6 +458,7 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         public InputAction @PauseMenu => m_Wrapper.m_FPSController_PauseMenu;
         public InputAction @Sprint => m_Wrapper.m_FPSController_Sprint;
         public InputAction @Jump => m_Wrapper.m_FPSController_Jump;
+        public InputAction @Pause => m_Wrapper.m_FPSController_Pause;
         public InputActionMap Get() { return m_Wrapper.m_FPSController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -466,6 +489,9 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 @Jump.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnJump;
+                @Pause.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_FPSControllerActionsCallbackInterface = instance;
             if (instance != null)
@@ -491,6 +517,9 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -513,5 +542,6 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         void OnPauseMenu(InputAction.CallbackContext context);
         void OnSprint(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }

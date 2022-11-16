@@ -63,10 +63,11 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
 
     private void Update()
     {
-        if (!DoPause())
+        if (DoPause())
         {
             if (isPaused)
             {
+                isPaused = false;
                 menuObj.SetActive(false);
                 Time.timeScale = 1;
                 Cursor.visible = false;
@@ -74,6 +75,7 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
             }
             else
             {
+                isPaused = true;
                 menuObj.SetActive(true);
                 Time.timeScale = 0;
                 Cursor.visible = true;
@@ -92,7 +94,7 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
 
     private bool DoPause()
     {
-        if (inputActions.FPSController.Jump.IsPressed())
+        if (inputActions.FPSController.Pause.IsPressed())
         {
             return true;
         }
