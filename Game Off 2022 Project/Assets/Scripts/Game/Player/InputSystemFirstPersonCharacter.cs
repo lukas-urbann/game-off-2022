@@ -56,6 +56,7 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
         if (menuObj == null)
         {
             menuObj = GameObject.Find("PauseUI");
+            Debug.LogWarning("menuObj is not referenced");
         }
         rb = GetComponent<Rigidbody>();
         controller = GetComponent<CharacterController>();

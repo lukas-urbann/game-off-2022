@@ -29,10 +29,12 @@ namespace Scenes
             if (tipOfTheDay == null)
             {
                 tipOfTheDay = GameObject.Find("Tip").GetComponent<TMP_Text>();
+                Debug.LogWarning("tipOfTheDay is not referenced");
             }
             if (loadingScreenGameObject == null)
             {
                 loadingScreenGameObject = GameObject.Find("Loading Screen");
+                Debug.LogWarning("loadingScreenGameObject is not referenced");
                 loadingScreenGameObject.SetActive(false);
             }
 
