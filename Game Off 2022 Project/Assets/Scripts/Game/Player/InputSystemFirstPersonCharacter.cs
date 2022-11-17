@@ -8,14 +8,14 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
     [Header("Input system")]
     [SerializeField] private InputSystemFirstPersonControls inputActions;
 
+    [Header("Player")]
     private CharacterController controller;
     private Rigidbody rb;
 
     [Header("Camera")]
     [SerializeField] private Camera cam;
     [SerializeField] private float movementSpeed = 2.0f;
-    [SerializeField] public float lookSensitivity = 1.0f;
-    
+    [SerializeField] public float lookSensitivity = 1.0f;  
     private float xRotation = 0f;
 
     [Header("Movement")]

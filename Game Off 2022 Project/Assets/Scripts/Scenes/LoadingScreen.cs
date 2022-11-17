@@ -14,6 +14,7 @@ namespace Scenes
         [SerializeField] private GameObject loadingScreenGameObject;
         [SerializeField] private TMP_Text tipOfTheDay;
         [SerializeField] private List<String> clicheString = new List<string>();
+        [SerializeField] private DiscordController discordController;
         
         private void Awake()
         {
@@ -25,7 +26,12 @@ namespace Scenes
             {
                 Instance = this;
             }
-               
+
+            if (discordController == null)
+            {
+                discordController = GameObject.Find("Discord controller").GetComponent<DiscordController>();
+                Debug.LogWarning("discordController is not referenced");
+            }
             if (tipOfTheDay == null)
             {
                 tipOfTheDay = GameObject.Find("Tip").GetComponent<TMP_Text>();
@@ -76,6 +82,18 @@ namespace Scenes
 
         private IEnumerator PreLoadAction(string sceneName)
         {
+            try
+            {
+                if (discordController == null)
+                {
+                    discordController = GameObject.Find("Discord controller").GetComponent<DiscordController>();
+                    Debug.LogWarning("discordController is not referenced");
+                }
+                discordController.SetStatus(sceneName);
+            }
+            catch
+            {
+            }
             Time.timeScale = 1;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
