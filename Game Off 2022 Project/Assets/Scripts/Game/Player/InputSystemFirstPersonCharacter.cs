@@ -169,17 +169,20 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
     {
         if (inputActions.FPSController.Crouch.ReadValue<float>() > 0)
         {
-            controller.height = crouchHeight;
+            //controller.height = crouchHeight;
+            controller.height = Mathf.Lerp(controller.height, crouchHeight, zoomSpeed * Time.deltaTime);
         }
         else
         {
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), 2.0f, -1))
             {
-                controller.height = crouchHeight;
+                //controller.height = crouchHeight;
+                controller.height = Mathf.Lerp(controller.height, crouchHeight, zoomSpeed * Time.deltaTime);
             }
             else
             {
-                controller.height = initHeight;
+                //controller.height = initHeight;
+                controller.height = Mathf.Lerp(controller.height, initHeight, zoomSpeed * Time.deltaTime);
             }
         }
     }
