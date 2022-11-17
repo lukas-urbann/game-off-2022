@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.Video;
 
 [RequireComponent(typeof(CharacterController))]
 public class InputSystemFirstPersonCharacter : MonoBehaviour
 {
+    #region Variables
     [Header("Input system")]
     [SerializeField] private InputSystemFirstPersonControls inputActions;
 
@@ -37,8 +39,15 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
     [SerializeField] private GameObject menuObj;
     private bool isPaused = false;
 
+    VideoPlayer videoPlayer;    //TODO smazat
+    #endregion
+
+
+    #region Unity Functions
     private void Awake()
     {
+        videoPlayer = GameObject.Find("Pause menu video player").GetComponent<VideoPlayer>();    //TODO smazat
+        videoPlayer.Pause();    //TODO smazat
         inputActions = new InputSystemFirstPersonControls();
     }
 
@@ -67,19 +76,11 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
         {
             if (isPaused)
             {
-                isPaused = false;
-                menuObj.SetActive(false);
-                Time.timeScale = 1;
-                Cursor.visible = false;
-                Cursor.lockState = CursorLockMode.Locked;
+                ResumeGame();
             }
             else
             {
-                isPaused = true;
-                menuObj.SetActive(true);
-                Time.timeScale = 0;
-                Cursor.visible = true;
-                Cursor.lockState = CursorLockMode.Confined;
+                PauseGame();
             }
         }
         if (isPaused)
@@ -90,11 +91,19 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
         DoLooking();
         DoZoom();
         DoCrouch();
+    }  
+    
+    private void OnDisable()
+    {
+        inputActions.Disable();
     }
+    #endregion
 
+
+    #region DoXXX
     private bool DoPause()
     {
-        if (inputActions.FPSController.Pause.IsPressed())
+        if (inputActions.FPSController.Pause.WasPressedThisFrame())
         {
             return true;
         }
@@ -175,6 +184,29 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
             }
         }
     }
+    #endregion
+
+           
+    #region GetXXX
+    /// <summary>
+    /// Retuns movement input since last frame
+    /// </summary>
+    /// <returns></returns>
+    public Vector2 GetPlayerMovement()
+    {
+        return inputActions.FPSController.Move.ReadValue<Vector2>();
+    }
+
+    /// <summary>
+    /// Returns mouse movement since last frame
+    /// </summary>
+    /// <returns></returns>
+    public Vector2 GetPlayerLook()
+    {
+        return inputActions.FPSController.Look.ReadValue<Vector2>();
+    }
+    #endregion
+
 
     private void UpdateZoom()
     {
@@ -186,18 +218,29 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
         baseFOV = fov;
     }
 
-    private void OnDisable()
+    /// <summary>
+    /// Pauses game
+    /// </summary>
+    private void PauseGame()
     {
-        inputActions.Disable();
+        isPaused = true;
+        menuObj.SetActive(true);
+        Time.timeScale = 0;
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        videoPlayer.Play();    //TODO smazat
     }
 
-    public Vector2 GetPlayerMovement()
+    /// <summary>
+    /// Resumes game
+    /// </summary>
+    public void ResumeGame()
     {
-        return inputActions.FPSController.Move.ReadValue<Vector2>();
-    }
-
-    public Vector2 GetPlayerLook()
-    {
-        return inputActions.FPSController.Look.ReadValue<Vector2>();
+        isPaused = false;
+        menuObj.SetActive(false);
+        Time.timeScale = 1;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        videoPlayer.Pause();    //TODO smazat
     }
 }

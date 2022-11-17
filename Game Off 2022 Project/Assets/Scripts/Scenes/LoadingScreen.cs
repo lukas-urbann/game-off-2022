@@ -25,6 +25,16 @@ namespace Scenes
             {
                 Instance = this;
             }
+               
+            if (tipOfTheDay == null)
+            {
+                tipOfTheDay = GameObject.Find("Tip").GetComponent<TMP_Text>();
+            }
+            if (loadingScreenGameObject == null)
+            {
+                loadingScreenGameObject = GameObject.Find("Loading Screen");
+                loadingScreenGameObject.SetActive(false);
+            }
 
             clicheString.Add("Ask not what your country can do for you, but what you can do for your country");
             clicheString.Add("When you die, it's for a long time");
@@ -34,12 +44,24 @@ namespace Scenes
             clicheString.Add("Fie, fi, foh, fum, I smell the blood of an englishman");
         }
 
+        private void Start()
+        {
+            Time.timeScale = 1;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
         public void StartLoading(string sceneName)
         {
             tipOfTheDay.text = clicheString[Random.Range(0, clicheString.Count - 1)];
             StartCoroutine(PreLoadAction(sceneName));
         }
-        
+        public void StartLoading(int sceneInt)
+        {
+            tipOfTheDay.text = clicheString[Random.Range(0, clicheString.Count - 1)];
+            StartCoroutine(PreLoadAction(NameFromIndex(sceneInt)));
+        }
+
         private IEnumerator LoadAsynchronously(string levelName)
         {
             AsyncOperation operation = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Single);
@@ -47,15 +69,26 @@ namespace Scenes
             {
                 Time.timeScale = 1;
                 yield return null;
-                loadingScreenGameObject.SetActive(false);
             }
         }
 
         private IEnumerator PreLoadAction(string sceneName)
         {
+            Time.timeScale = 1;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             loadingScreenGameObject.SetActive(true);
             yield return new WaitForSeconds(3f);
             StartCoroutine(LoadAsynchronously(sceneName));
+        }
+
+        private static string NameFromIndex(int BuildIndex)
+        {
+            string path = SceneUtility.GetScenePathByBuildIndex(BuildIndex);
+            int slash = path.LastIndexOf('/');
+            string name = path.Substring(slash + 1);
+            int dot = name.LastIndexOf('.');
+            return name.Substring(0, dot);
         }
     }
 }
