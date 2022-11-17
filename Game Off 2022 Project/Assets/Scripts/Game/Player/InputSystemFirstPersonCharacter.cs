@@ -143,14 +143,13 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
             controller.Move(move * movementSpeed * Time.deltaTime);
         }
 
-        
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime); 
-        if (inputActions.FPSController.Jump.IsPressed() && grounded)
+         
+        if (inputActions.FPSController.Jump.WasPressedThisFrame() && grounded)
         {
-            controller.Move(Vector3.up * jumpMultiplier * Time.deltaTime);
-            //rb.AddForce(Vector3.up * jumpMultiplier, ForceMode.Impulse);
-        }
+            velocity.y += Mathf.Sqrt(jumpMultiplier * -1f * gravity);
+        }  
+        velocity.y += gravity * Time.deltaTime;
+        controller.Move(velocity * Time.deltaTime);
     }
 
     private void DoZoom()

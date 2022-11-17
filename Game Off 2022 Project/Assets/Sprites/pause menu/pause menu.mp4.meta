@@ -14,8 +14,8 @@ VideoClipImporter:
   importAudio: 1
   targetSettings:
     0:
-      enableTranscoding: 0
-      codec: 0
+      enableTranscoding: 1
+      codec: 2
       resizeFormat: 3
       aspectRatio: 5
       customWidth: 1132
