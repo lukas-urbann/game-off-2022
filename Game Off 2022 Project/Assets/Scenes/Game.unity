@@ -1746,6 +1746,10 @@ PrefabInstance:
       propertyPath: rolloffMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6597923510233091902, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
+      propertyPath: MinDistance
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7039389134812419269, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
       propertyPath: crosshair
       value: 
