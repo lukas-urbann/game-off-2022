@@ -6,14 +6,16 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
 {
     #region Variables
     [Header("Input system")]
-    [SerializeField] private InputSystemFirstPersonControls inputActions;
+    private InputSystemFirstPersonControls inputActions;
+    public InputSystemFirstPersonControls InputActions { get => inputActions; }
+    [SerializeField] private Crosshair crosshair;
 
     [Header("Player")]
     private CharacterController controller;
     private Rigidbody rb;
 
     [Header("Camera")]
-    [SerializeField] private Camera cam;
+    private Camera cam;
     [SerializeField] private float movementSpeed = 2.0f;
     [SerializeField] public float lookSensitivity = 1.0f;  
     private float xRotation = 0f;
@@ -39,24 +41,31 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
     [SerializeField] private GameObject menuObj;
     private bool isPaused = false;
 
-    VideoPlayer videoPlayer;    //TODO smazat
+    VideoPlayer videoPlayer;    //smazat
     #endregion
 
 
     #region Unity Functions
     private void Awake()
     {
-        videoPlayer = GameObject.Find("Pause menu video player").GetComponent<VideoPlayer>();    //TODO smazat
-        videoPlayer.Pause();    //TODO smazat
+        cam = Camera.main;
         inputActions = new InputSystemFirstPersonControls();
     }
 
     private void Start()
-    {
+    {      
+        videoPlayer = GameObject.Find("Pause menu video player").GetComponent<VideoPlayer>();    //smazat
+        videoPlayer.Pause();    //smazat
+
         if (menuObj == null)
         {
             menuObj = GameObject.Find("PauseUI");
             Debug.LogWarning("menuObj is not referenced");
+        }
+        if (crosshair == null)
+        {
+            crosshair = Camera.main.GetComponent<Crosshair>();
+            Debug.LogWarning("crosshair is not referenced");
         }
         rb = GetComponent<Rigidbody>();
         controller = GetComponent<CharacterController>();
@@ -92,6 +101,7 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
         DoLooking();
         DoZoom();
         DoCrouch();
+        DoInteract();
     }  
     
     private void OnDisable()
@@ -187,6 +197,14 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
             }
         }
     }
+
+    private void DoInteract()
+    {
+        if (inputActions.FPSController.Interact.WasPressedThisFrame() && crosshair.C_State == Crosshair.CrosshairState.interactable)
+        {
+            crosshair.Interactable().Interact();
+        }
+    }
     #endregion
 
            
@@ -231,7 +249,7 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        videoPlayer.Play();    //TODO smazat
+        videoPlayer.Play();    //smazat
     }
 
     /// <summary>
@@ -244,6 +262,6 @@ public class InputSystemFirstPersonCharacter : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        videoPlayer.Pause();    //TODO smazat
+        videoPlayer.Pause();    //smazat
     }
 }

@@ -164,13 +164,13 @@ VideoPlayer:
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
-  - 1
+  - 0.3
   m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
-  m_SkipOnDrop: 1
+  m_SkipOnDrop: 0
   m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
@@ -305,6 +305,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -9032557090061056480, guid: b791acea3a409d94eaaaa628879724ff, type: 3}
+--- !u!114 &62491566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62491560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f69b69b5a9df5b141ba08433cf9a7d59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &337778079
 GameObject:
   m_ObjectHideFlags: 0
@@ -1435,21 +1447,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   color: 0
   eraseRenderer: 1
---- !u!1 &1060445117 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2240643065093264016, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-  m_PrefabInstance: {fileID: 1465248769}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1060445124
+--- !u!114 &1058730900
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1060445117}
+  m_GameObject: {fileID: 1058730890}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e12900426d1676a42b765db03ad85b14, type: 3}
+  m_Script: {fileID: 11500000, guid: f69b69b5a9df5b141ba08433cf9a7d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1152693691
@@ -1675,30 +1682,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1684613170, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: lineColor1.g
-      value: 0.72004616
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684613170, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: lineColor1.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684613170, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: lineColor2.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684613170, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: lineColor2.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684613170, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: lineColor2.r
-      value: 0.053618193
-      objectReference: {fileID: 0}
-    - target: {fileID: 1684613170, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: useFillColor
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2240643064954224089, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1757,6 +1740,29 @@ PrefabInstance:
       objectReference: {fileID: 556953945}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
+--- !u!1 &1465248770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2654042090209813282, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
+  m_PrefabInstance: {fileID: 1465248769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &1465248771 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 7725807451934754433, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
+  m_PrefabInstance: {fileID: 1465248769}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1465248772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465248770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cbea0a0fb1af454b9bbefa3719f12af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlight: {fileID: 1465248771}
 --- !u!1 &1514737230
 GameObject:
   m_ObjectHideFlags: 0

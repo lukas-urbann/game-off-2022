@@ -29,8 +29,14 @@ namespace Scenes
 
             if (discordController == null)
             {
-                discordController = GameObject.Find("Discord controller").GetComponent<DiscordController>();
-                Debug.LogWarning("discordController is not referenced");
+                try
+                {
+                    discordController = GameObject.Find("Discord controller").GetComponent<DiscordController>();
+                }
+                catch
+                {
+                    Debug.LogWarning("discordController is not referenced");
+                }
             }
             if (tipOfTheDay == null)
             {

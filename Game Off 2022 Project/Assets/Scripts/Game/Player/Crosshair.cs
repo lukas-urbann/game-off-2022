@@ -15,7 +15,7 @@ public class Crosshair : MonoBehaviour
     public cakeslice.Outline temp_outline;
     [SerializeField] private float reach = 5f;
     private CrosshairState c_state = CrosshairState.normal;
-    private CrosshairState C_State { get => c_state; }
+    public CrosshairState C_State { get => c_state; }
 
     private void Start()
     {
@@ -103,11 +103,17 @@ public class Crosshair : MonoBehaviour
                 c_state = CrosshairState.normal;
                 crosshair.sprite = c_normal;
                 temp_outline.eraseRenderer = true;
+                temp_outline = null;
             }
         }
     }
 
-    private enum CrosshairState
+    public Interactable Interactable()
+    {
+        return temp_outline.GetComponent<Interactable>();
+    }
+
+    public enum CrosshairState
     {
         normal,
         interactable
