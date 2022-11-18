@@ -4,20 +4,39 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
+    private void Awake()
+    {
+        if (gameObject.name.Equals("Baterkos") && PlayerPrefs.GetInt("Baterkos", 0) == 1) 
+        {
+            Debug.Log("Player already has a flashlight. Destroying flashligh gameobject...");
+            Destroy(gameObject);
+        }
+        else if (gameObject.name.Equals("Radios") && PlayerPrefs.GetInt("Radios", 0) == 1)
+        {
+            Debug.Log("Player already has a radio. Destroying flashligh gameobject...");
+            Destroy(gameObject);
+        }
+    }
+
     public void Interact()
     {
         if (gameObject.name.Equals("Baterkos")) //actual gameobject
         {
-            GameObject.Find("Flashlight").GetComponent<Flashlight>().PickUp();  //lightsource on player
+            GameObject.Find("Player flashlight").GetComponent<Flashlight>().PickUp();  //lightsource on player
             Destroy(gameObject);
         }
-        else if (gameObject.name.Equals("Radios"))
+        else if (gameObject.name.Equals("Radios"))  //actual gameobject
         {
-            //gameObject.GetComponent<Radio>().PickUp();
-        } 
-        else
+            GameObject.Find("Player radio").GetComponent<Radio>().PickUp();  //radio on player
+            Destroy(gameObject);
+        }
+        else if (gameObject.name.Contains("interactable"))
         {
             Debug.LogError("není implementované LOL");
+        }
+        else
+        {
+            Debug.LogError("Trying to interact with non-interactable object");
         }
     }
 }

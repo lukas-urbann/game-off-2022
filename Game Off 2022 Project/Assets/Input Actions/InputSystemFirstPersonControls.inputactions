@@ -94,6 +94,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Radio",
+                    "type": "Button",
+                    "id": "9593ea83-80d6-447c-895b-2199f5809489",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -353,11 +362,22 @@
                 {
                     "name": "",
                     "id": "6efc6c05-d5c0-4b0b-965c-88a6c89954f4",
-                    "path": "<Keyboard>/q",
+                    "path": "<Keyboard>/l",
                     "interactions": "",
                     "processors": "",
                     "groups": "FPSControllerInputs",
                     "action": "Flashlight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f574c364-f922-479a-b2ad-87174ec8d88c",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "FPSControllerInputs",
+                    "action": "Radio",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

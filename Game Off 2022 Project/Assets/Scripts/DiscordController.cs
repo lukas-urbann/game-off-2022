@@ -29,7 +29,15 @@ public class DiscordController : MonoBehaviour
 
     private void Start()
     {
-        discord = new Discord.Discord(applicationID, (ulong)CreateFlags.NoRequireDiscord);
+        try
+        {
+            discord = new Discord.Discord(applicationID, (ulong)CreateFlags.NoRequireDiscord);
+        }
+        catch (ResultException)
+        {
+            Debug.Log("Discord is not running");
+            Destroy(gameObject);
+        }
 
         time = System.DateTimeOffset.Now.ToUnixTimeMilliseconds();
 

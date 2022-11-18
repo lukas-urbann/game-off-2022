@@ -116,6 +116,15 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Radio"",
+                    ""type"": ""Button"",
+                    ""id"": ""9593ea83-80d6-447c-895b-2199f5809489"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -375,11 +384,22 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 {
                     ""name"": """",
                     ""id"": ""6efc6c05-d5c0-4b0b-965c-88a6c89954f4"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""path"": ""<Keyboard>/l"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""FPSControllerInputs"",
                     ""action"": ""Flashlight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f574c364-f922-479a-b2ad-87174ec8d88c"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""FPSControllerInputs"",
+                    ""action"": ""Radio"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -422,6 +442,7 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         m_FPSController_Pause = m_FPSController.FindAction("Pause", throwIfNotFound: true);
         m_FPSController_Interact = m_FPSController.FindAction("Interact", throwIfNotFound: true);
         m_FPSController_Flashlight = m_FPSController.FindAction("Flashlight", throwIfNotFound: true);
+        m_FPSController_Radio = m_FPSController.FindAction("Radio", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -491,6 +512,7 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
     private readonly InputAction m_FPSController_Pause;
     private readonly InputAction m_FPSController_Interact;
     private readonly InputAction m_FPSController_Flashlight;
+    private readonly InputAction m_FPSController_Radio;
     public struct FPSControllerActions
     {
         private @InputSystemFirstPersonControls m_Wrapper;
@@ -505,6 +527,7 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         public InputAction @Pause => m_Wrapper.m_FPSController_Pause;
         public InputAction @Interact => m_Wrapper.m_FPSController_Interact;
         public InputAction @Flashlight => m_Wrapper.m_FPSController_Flashlight;
+        public InputAction @Radio => m_Wrapper.m_FPSController_Radio;
         public InputActionMap Get() { return m_Wrapper.m_FPSController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -544,6 +567,9 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 @Flashlight.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnFlashlight;
                 @Flashlight.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnFlashlight;
                 @Flashlight.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnFlashlight;
+                @Radio.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnRadio;
+                @Radio.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnRadio;
+                @Radio.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnRadio;
             }
             m_Wrapper.m_FPSControllerActionsCallbackInterface = instance;
             if (instance != null)
@@ -578,6 +604,9 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 @Flashlight.started += instance.OnFlashlight;
                 @Flashlight.performed += instance.OnFlashlight;
                 @Flashlight.canceled += instance.OnFlashlight;
+                @Radio.started += instance.OnRadio;
+                @Radio.performed += instance.OnRadio;
+                @Radio.canceled += instance.OnRadio;
             }
         }
     }
@@ -603,5 +632,6 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         void OnPause(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnFlashlight(InputAction.CallbackContext context);
+        void OnRadio(InputAction.CallbackContext context);
     }
 }
