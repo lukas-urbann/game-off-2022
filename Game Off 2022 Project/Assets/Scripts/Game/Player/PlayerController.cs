@@ -214,6 +214,7 @@ public class PlayerController : MonoBehaviour
             {
                 isExhausted = false;
                 currentStamina = 0f;
+                SetWalkingState(WalkingState.standing);
             }
             else
             {
@@ -374,7 +375,7 @@ public class PlayerController : MonoBehaviour
                     break;
                 case WalkingState.exhausted:
                     walkSound.clip = exhausted;
-                    walkSound.Play();   //TODO opravit,nemam nejmensiho tucha proc to nejde
+                    walkSound.Play();
                     break;
                 default:
                     Debug.LogError("Unknown WalkingState: " + walkingState);

@@ -25,7 +25,7 @@ public class Headbob : MonoBehaviour
         startPos = cam.localPosition;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         CheckMotion();
         ResetPosition();

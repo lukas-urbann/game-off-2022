@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1152693692}
-  m_IndirectSpecularColor: {r: 0.12869737, g: 0.13615517, b: 0.123915315, a: 1}
+  m_IndirectSpecularColor: {r: 0.00511966, g: 0.0045040203, b: 0.005456243, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1734,22 +1734,6 @@ PrefabInstance:
       propertyPath: menuObj
       value: 
       objectReference: {fileID: 454561452}
-    - target: {fileID: 2240643064954224095, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: maxStamina
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4365036966619874901, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: MinDistance
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4365036966619874901, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6597923510233091902, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: MinDistance
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7039389134812419269, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
       propertyPath: crosshair
       value: 
