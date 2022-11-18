@@ -38,6 +38,10 @@ public class Flashlight : MonoBehaviour
         {
             baterkos.enabled = false;
         }
+        else
+        {
+            baterkos.enabled = true;
+        }
     }
 
     private void Update()

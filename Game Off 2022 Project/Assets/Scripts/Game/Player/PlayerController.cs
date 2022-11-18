@@ -374,7 +374,7 @@ public class PlayerController : MonoBehaviour
                     break;
                 case WalkingState.exhausted:
                     walkSound.clip = exhausted;
-                    walkSound.Play();
+                    walkSound.Play();   //TODO opravit,nemam nejmensiho tucha proc to nejde
                     break;
                 default:
                     Debug.LogError("Unknown WalkingState: " + walkingState);

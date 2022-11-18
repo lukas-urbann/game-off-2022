@@ -1682,18 +1682,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1684613171, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: shader
-      value: 
-      objectReference: {fileID: 4800000, guid: 95703b29f49b899499233ea7308bb800, type: 3}
-    - target: {fileID: 1684613171, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: BlockCount
-      value: 175
-      objectReference: {fileID: 0}
-    - target: {fileID: 1540026262402310813, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: finalBlitToCameraTarget
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2240643064954224089, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1747,17 +1735,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 454561452}
     - target: {fileID: 2240643064954224095, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: crouchHeight
-      value: 0.5
+      propertyPath: maxStamina
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365036966619874901, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
+      propertyPath: MinDistance
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365036966619874901, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7039389134812419269, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
       propertyPath: crosshair
       value: 
       objectReference: {fileID: 556953945}
-    - target: {fileID: 8429301975455857903, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d4907ec61022a4e9054b5ffca8850a, type: 3}
 --- !u!1 &1514737230

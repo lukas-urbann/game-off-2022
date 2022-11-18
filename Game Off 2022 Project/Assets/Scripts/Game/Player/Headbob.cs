@@ -55,8 +55,8 @@ public class Headbob : MonoBehaviour
         pos.x += Mathf.Cos(Time.time * hz / 2) * amplitude * 1.2f;
         if (playerController.InputActions.FPSController.Sprint.WasPressedThisFrame())
         {
-            pos.y *= 2f;
-            pos.x *= 2f;
+            pos.y *= 2.5f;
+            pos.x *= 1.5f;
         }
         return pos;
     }
