@@ -29,7 +29,7 @@ public class Headbob : MonoBehaviour
     {
         CheckMotion();
         ResetPosition();
-        cam.LookAt(FocusTarget());
+        //cam.LookAt(FocusTarget());
     }
 
 
@@ -52,7 +52,7 @@ public class Headbob : MonoBehaviour
     {
         Vector3 pos = Vector3.zero;
         pos.y += Mathf.Sin(Time.time * hz) * amplitude ;
-        pos.x += Mathf.Cos(Time.time * hz / 2) * amplitude * 2;
+        pos.x += Mathf.Cos(Time.time * hz / 2) * amplitude * 1.2f;
         if (playerController.InputActions.FPSController.Sprint.WasPressedThisFrame())
         {
             pos.y *= 2f;
