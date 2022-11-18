@@ -56,7 +56,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip exhausted;
 
     [Header("PostFX")]
-    [SerializeField] private PostProcessVolume vignette;    //TODO udìlat aby pøi sprintu zèernala obrazovka
+    [SerializeField] private PostProcessVolume postFx;
+    private Vignette vignette;
     #endregion
 
 
@@ -68,10 +69,17 @@ public class PlayerController : MonoBehaviour
     }
 
     private void Start()
-    {      
+    {
+        postFx.profile.TryGetSettings(out vignette);
+
         videoPlayer = GameObject.Find("Pause menu video player").GetComponent<VideoPlayer>();    //smazat
         videoPlayer.Pause();    //smazat
 
+        if (postFx == null)
+        {
+            postFx = GetComponent<PostProcessVolume>();    //TODO zjistit jak to najít
+            Debug.LogWarning("postFx is not referenced");
+        }
         if (menuObj == null)
         {
             menuObj = GameObject.Find("PauseUI");
@@ -89,6 +97,7 @@ public class PlayerController : MonoBehaviour
             crosshair = Camera.main.GetComponent<Crosshair>();
             Debug.LogWarning("crosshair is not referenced");
         }
+        
         controller = GetComponent<CharacterController>();
         initHeight = controller.height;
         Cursor.lockState = CursorLockMode.Locked;
@@ -123,6 +132,7 @@ public class PlayerController : MonoBehaviour
         DoZoom();
         DoCrouch();
         DoInteract();
+        DoPostFX();
     }  
     
     private void OnDisable()
@@ -259,6 +269,11 @@ public class PlayerController : MonoBehaviour
             crosshair.Interactable().Interact();
         }
     }
+    
+    private void DoPostFX()
+    {
+        vignette.intensity.value = MapToRange(0f, maxStamina, 0f, 1f, currentStamina);
+    }
     #endregion
 
            
@@ -358,7 +373,6 @@ public class PlayerController : MonoBehaviour
                     walkSound.Play();
                     break;
                 case WalkingState.exhausted:
-                    print("jsem unaveny");
                     walkSound.clip = exhausted;
                     walkSound.Play();
                     break;
@@ -377,5 +391,20 @@ public class PlayerController : MonoBehaviour
         walking,
         running,
         exhausted
+    }
+
+    /// <summary>
+    /// Remaps value within range
+    /// </summary>
+    /// <param name="originalStart">Start of original range</param>
+    /// <param name="originalEnd">End of original range</param>
+    /// <param name="newStart">Start of new range</param>
+    /// <param name="newEnd">End of new range</param>
+    /// <param name="value">Value to be remapped</param>
+    /// <returns></returns>
+    public static float MapToRange(float originalStart, float originalEnd, float newStart, float newEnd, float value)
+    {
+        double scale = (double)(newEnd - newStart) / (originalEnd - originalStart);
+        return (float)(newStart + ((value - originalStart) * scale));
     }
 }
