@@ -10,11 +10,12 @@ public class Flashlight : MonoBehaviour
     [Header("Variables")]
     private bool hasFlashlight = false;
     [SerializeField] private Light baterkos;
+    [SerializeField] private AudioSource audioSource;
 
 
     private void Start()
     {
-        inputActions = GameObject.Find("Player").GetComponent<InputSystemFirstPersonCharacter>().InputActions;
+        inputActions = GameObject.Find("Player").GetComponent<PlayerController>().InputActions;
 
         if (PlayerPrefs.GetInt("Baterkos", 0) == 1)
         {
@@ -27,6 +28,12 @@ public class Flashlight : MonoBehaviour
             Debug.LogWarning("baterkos is not referenced");
         }
 
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+            Debug.LogWarning("audioSource is not referenced");
+        }
+
         if (PlayerPrefs.GetInt("Sviti baterkos", -1) == -1)
         {
             baterkos.enabled = false;
@@ -35,8 +42,9 @@ public class Flashlight : MonoBehaviour
 
     private void Update()
     {
-        if (hasFlashlight && inputActions.FPSController.Flashlight.WasPressedThisFrame())
+        if (hasFlashlight && inputActions.FPSController.Flashlight.WasPressedThisFrame())   //switching the flashlight on/off
         {
+            audioSource.Play();
             baterkos.enabled = !baterkos.isActiveAndEnabled;
             PlayerPrefs.SetInt("Sviti baterkos", PlayerPrefs.GetInt("Sviti baterkos", -1) * -1);
         }

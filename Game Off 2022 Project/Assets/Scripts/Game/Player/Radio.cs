@@ -14,7 +14,7 @@ public class Radio : MonoBehaviour
 
     private void Start()
     {
-        inputActions = GameObject.Find("Player").GetComponent<InputSystemFirstPersonCharacter>().InputActions;
+        inputActions = GameObject.Find("Player").GetComponent<PlayerController>().InputActions;
         audioSource = GetComponent<AudioSource>();
 
         if (PlayerPrefs.GetInt("Radios", 0) == 1)

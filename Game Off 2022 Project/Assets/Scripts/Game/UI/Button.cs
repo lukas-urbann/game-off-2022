@@ -15,11 +15,18 @@ namespace Game.UI
             clickColor = new Color(0.9f,0.82f,0.16f, 1);
         
         [SerializeField] private TMP_Text text;
+        private AudioSource hover;
+        private AudioSource click;
 
         private void Start()
         {
+            AudioSource[] temp = GameObject.Find("UI").GetComponents<AudioSource>();
+            hover = temp[0];
+            click = temp[1];
             if(text == null)
+            {
                 text = GetComponentInChildren(typeof(TMP_Text), true) as TMP_Text;
+            }
                 
             text.color = baseColor;
         }
@@ -27,6 +34,8 @@ namespace Game.UI
         public void OnPointerEnter(PointerEventData eventData)
         {
             text.color = hoverColor;
+            click.Stop();
+            hover.Play();
         }
         
         public void OnPointerExit(PointerEventData eventData)
@@ -37,6 +46,8 @@ namespace Game.UI
         public void OnPointerDown(PointerEventData eventData)
         {
             text.color = clickColor;
+            hover.Stop();
+            click.Play();
         }
         
         public void OnPointerUp(PointerEventData eventData)

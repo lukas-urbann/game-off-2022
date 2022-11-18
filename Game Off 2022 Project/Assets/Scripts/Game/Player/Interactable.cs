@@ -8,12 +8,12 @@ public class Interactable : MonoBehaviour
     {
         if (gameObject.name.Equals("Baterkos") && PlayerPrefs.GetInt("Baterkos", 0) == 1) 
         {
-            Debug.Log("Player already has a flashlight. Destroying flashligh gameobject...");
+            Debug.Log("Player already has a flashlight. Destroying flashlight gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
             Destroy(gameObject);
         }
         else if (gameObject.name.Equals("Radios") && PlayerPrefs.GetInt("Radios", 0) == 1)
         {
-            Debug.Log("Player already has a radio. Destroying flashligh gameobject...");
+            Debug.Log("Player already has a radio. Destroying radio gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
             Destroy(gameObject);
         }
     }
