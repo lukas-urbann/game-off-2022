@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: b85890f9528e17f48a8a8bbf9b12d371
+guid: 44c86f1d13d583b439ea69472cf1c66b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Cover
-    second: {fileID: 2100000, guid: 076f083be770a824a9af02512e0cf9b7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Pages
-    second: {fileID: 2100000, guid: e8b368d4dcdc9f647b96257b6c5f91c6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Writings
-    second: {fileID: 2100000, guid: 900ad08c492784a42b6b11154620d812, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
