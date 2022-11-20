@@ -38,6 +38,10 @@ public class Interactable : MonoBehaviour
         {
             gameObject.GetComponent<Door>().Rotate();
         }
+        else if (name.Equals("Padlock"))
+        {
+            GameObject.Find("Padlock UI").GetComponent<Padlock>().StartPadlock();
+        }
         else if (name.Contains("_interactable"))
         {
             PlayerPrefs.SetInt(gameObject.name, 1); //"picking up" a object
