@@ -30,9 +30,13 @@ public class Interactable : MonoBehaviour
             GameObject.Find("Player radio").GetComponent<Radio>().PickUp();  //radio on player
             Destroy(gameObject);
         }
-        else if (gameObject.name.Contains("interactable"))
+        else if (gameObject.name.Equals("doorWing"))
         {
-            Debug.LogError("není implementované LOL");
+            gameObject.GetComponent<Door>().Rotate();
+        }
+        else if (gameObject.name.Contains("_interactable"))
+        {
+            PlayerPrefs.SetInt(gameObject.name, 1);
         }
         else
         {
