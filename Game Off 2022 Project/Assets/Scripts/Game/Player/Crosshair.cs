@@ -1,19 +1,22 @@
 using UnityEngine;
 using UnityEngine.UI;
-using cakeslice;
+using TMPro;
 
 public class Crosshair : MonoBehaviour
 {
     [Header("Cursor")]
     [SerializeField] private Image crosshair;
 
+    [Header("Item description")]
+    [SerializeField] private TMP_Text itemDescription;
+
     [Header("Sprites")]
     [SerializeField] private Sprite c_normal;
     [SerializeField] private Sprite c_interactable;
 
     [Header("Variables")]                           
-    public cakeslice.Outline temp_outline;
-    [SerializeField] private float reach = 5f;
+    private cakeslice.Outline temp_outline;
+    [SerializeField] private float reach = 2f;
     private CrosshairState c_state = CrosshairState.normal;
     public CrosshairState C_State { get => c_state; }
 
@@ -21,9 +24,14 @@ public class Crosshair : MonoBehaviour
     {
         if (crosshair == null)
         {
-            Debug.LogWarning("Crosshair is not referenced");
+            Debug.LogWarning("crosshair is not referenced");
             crosshair = GameObject.Find("Crosshair").GetComponent<Image>();
-        }    
+        }
+        if (itemDescription == null)
+        {
+            Debug.LogWarning("itemDescription is not referenced");
+            itemDescription = GameObject.Find("Item description").GetComponent<TMP_Text>();
+        }
     }
 
     private void Update()
@@ -43,10 +51,19 @@ public class Crosshair : MonoBehaviour
                     UpdateUI(false, hit.transform.GetComponent<cakeslice.Outline>());
                 }
             }
-            catch (System.Exception)
+            catch
             {
+                Debug.LogError("Interatcable object does not have outline script!");
             }
 
+            try
+            {
+                itemDescription.text = hit.transform.GetComponent<Description>().description;
+            }
+            catch
+            {
+                itemDescription.text = "";
+            }
         }
         else
         {
@@ -80,6 +97,7 @@ public class Crosshair : MonoBehaviour
                 temp_outline.eraseRenderer = true;
                 c_state = CrosshairState.normal;
                 crosshair.sprite = c_normal;
+                itemDescription.text = "";
             }
         }
     }
@@ -104,6 +122,7 @@ public class Crosshair : MonoBehaviour
                 crosshair.sprite = c_normal;
                 temp_outline.eraseRenderer = true;
                 temp_outline = null;
+                itemDescription.text = "";
             }
         }
     }

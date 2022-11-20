@@ -1,12 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
     private void Awake()
     {
-        if (gameObject.name.Equals("Baterkos") && PlayerPrefs.GetInt("Baterkos", 0) == 1) 
+        if (name.Contains("_interactable") && PlayerPrefs.GetInt(name, 0) == 1)
+        {
+            Debug.Log("Player already has a" + name + ". Destroying radio gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
+            Destroy(gameObject);
+        }
+
+        if (name.Equals("Baterkos") && PlayerPrefs.GetInt("Baterkos", 0) == 1) 
         {
             Debug.Log("Player already has a flashlight. Destroying flashlight gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
             Destroy(gameObject);
@@ -20,12 +24,12 @@ public class Interactable : MonoBehaviour
 
     public void Interact()
     {
-        if (gameObject.name.Equals("Baterkos")) //actual gameobject
+        if (name.Equals("Baterkos")) //actual gameobject
         {
             GameObject.Find("Player flashlight").GetComponent<Flashlight>().PickUp();  //lightsource on player
             Destroy(gameObject);
         }
-        else if (gameObject.name.Equals("Radios"))  //actual gameobject
+        else if (name.Equals("Radios"))  //actual gameobject
         {
             GameObject.Find("Player radio").GetComponent<Radio>().PickUp();  //radio on player
             Destroy(gameObject);
@@ -34,9 +38,10 @@ public class Interactable : MonoBehaviour
         {
             gameObject.GetComponent<Door>().Rotate();
         }
-        else if (gameObject.name.Contains("_interactable"))
+        else if (name.Contains("_interactable"))
         {
-            PlayerPrefs.SetInt(gameObject.name, 1);
+            PlayerPrefs.SetInt(gameObject.name, 1); //"picking up" a object
+            Destroy(gameObject);
         }
         else
         {

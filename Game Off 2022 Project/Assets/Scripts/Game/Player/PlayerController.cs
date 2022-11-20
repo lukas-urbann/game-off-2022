@@ -7,30 +7,30 @@ using UnityEngine.Rendering.PostProcessing;
 public class PlayerController : MonoBehaviour
 {
     #region Variables
-    [Header("Input system")]
-    private InputSystemFirstPersonControls inputActions;
-    public InputSystemFirstPersonControls InputActions { get => inputActions; }
+    [Header("Input system")]                                                         
     [SerializeField] private Crosshair crosshair;
+    private InputSystemFirstPersonControls inputActions;
+    public InputSystemFirstPersonControls InputActions { get => inputActions; }   
 
-    [Header("Player")]
-    private CharacterController controller; 
+    [Header("Player")]                           
     public float gravity = -9.81f;
+    private CharacterController controller; 
 
-    [Header("Camera")]
-    private Camera cam;
+    [Header("Camera")]                                       
+    [SerializeField] public float lookSensitivity = 1.0f;   
     [SerializeField] private float movementSpeed = 2.0f;
-    [SerializeField] public float lookSensitivity = 1.0f;  
+    private Camera cam;
     private float xRotation = 0f;
 
     [Header("Movement")]
-    private WalkingState currentWalkingState = WalkingState.standing;
     [SerializeField] float maxStamina = 10f;
     private float currentStamina = 0f;
     private bool isExhausted = false;
     [SerializeField] private float sprintMultiplier = 2f;
     [SerializeField] private float jumpMultiplier = 2f;
     private bool grounded;  
-    private Vector3 velocity;
+    private Vector3 velocity;                      
+    private WalkingState currentWalkingState = WalkingState.standing;
 
     [Header("FOV")]
     public float zoomFOV = 35.0f;
@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
 
         if (postFx == null)
         {
-            postFx = GetComponent<PostProcessVolume>();    //TODO zjistit jak to najít
+            postFx = GetComponent<PostProcessVolume>(); 
             Debug.LogWarning("postFx is not referenced");
         }
         if (menuObj == null)
