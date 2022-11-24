@@ -1,5 +1,4 @@
 using TMPro;
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,7 +12,7 @@ namespace Scenes
         public static LoadingScreen Instance;
         [SerializeField] private GameObject loadingScreenGameObject;
         [SerializeField] private TMP_Text tipOfTheDay;
-        [SerializeField] private List<String> clicheString = new List<string>();
+        [SerializeField] private List<string> clicheString = new List<string>();
         [SerializeField] private DiscordController discordController;
         
         private void Awake()
@@ -63,6 +62,11 @@ namespace Scenes
             Time.timeScale = 1;
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
+        }
+
+        public void LoadLastLevel()
+        {
+            StartLoading(PlayerPrefs.GetInt("currentLevel", 1));
         }
 
         public void StartLoading(string sceneName)
