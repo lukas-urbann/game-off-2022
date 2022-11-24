@@ -1088,6 +1088,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 255270496267155504, guid: a16eae0af83edd24a9e7bdf1d02099e3, type: 3}
+      propertyPath: m_Constraints
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 255270496267155504, guid: a16eae0af83edd24a9e7bdf1d02099e3, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3334043486196417514, guid: a16eae0af83edd24a9e7bdf1d02099e3, type: 3}
       propertyPath: locked
       value: 

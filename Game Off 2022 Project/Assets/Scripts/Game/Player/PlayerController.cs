@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
     [Header("Camera")]                                       
     [SerializeField] public float lookSensitivity = 1.0f;   
     [SerializeField] private float movementSpeed = 2.0f;
-    private Camera cam;
+    [SerializeField] private Camera cam;
     private float xRotation = 0f;
 
     [Header("Movement")]
@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
     #region Unity Functions
     private void Awake()
     {
-        cam = Camera.main;
+        //cam = Camera.main; Tohle tu být nemůže kvůli tomu jak se přepínaj cutscény
         inputActions = new InputSystemFirstPersonControls();
     }
 

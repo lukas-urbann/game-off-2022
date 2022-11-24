@@ -34,7 +34,7 @@ public class Interactable : MonoBehaviour
             GameObject.Find("Player radio").GetComponent<Radio>().PickUp();  //radio on player
             Destroy(gameObject);
         }
-        else if (gameObject.name.Equals("doorWing"))
+        else if (gameObject.name.Equals("doorWing") || (gameObject.CompareTag("Object") && gameObject.layer.Equals(8)))
         {
             gameObject.GetComponent<Door>().Rotate();
         }

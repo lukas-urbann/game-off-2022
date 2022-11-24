@@ -35,7 +35,7 @@ public class Crosshair : MonoBehaviour
     }
 
     private void Update()
-    {
+    { //Nemělo by to být ve fixed updatu ??
         RaycastHit hit;
 
         if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, reach))

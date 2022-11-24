@@ -35,11 +35,11 @@ public class Door : MonoBehaviour
                 isOpen = false;
                 if (inwards)
                 {
-                    gameObject.transform.Rotate(0f, -90f, 0f, Space.Self);
+                    gameObject.transform.Rotate(0f, 0f, 90f, Space.Self);
                 }
                 else
                 {
-                    gameObject.transform.Rotate(0f, 90f, 0f, Space.Self);
+                    gameObject.transform.Rotate(0f, 0f, -90f, Space.Self);
                 }
             }
             else
@@ -47,11 +47,11 @@ public class Door : MonoBehaviour
                 isOpen = true;
                 if (inwards)
                 {
-                    gameObject.transform.Rotate(0f, 90f, 0f, Space.Self);
+                    gameObject.transform.Rotate(0f, 0f, -90f, Space.Self);
                 }
                 else
                 {
-                    gameObject.transform.Rotate(0f, -90f, 0f, Space.Self);
+                    gameObject.transform.Rotate(0f, 0f, 90f, Space.Self);
                 }
             }
         }
