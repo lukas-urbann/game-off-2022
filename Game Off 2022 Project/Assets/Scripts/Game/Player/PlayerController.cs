@@ -46,7 +46,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject menuObj;
     private bool isPaused = false;
     private List<AudioSource> sources = new List<AudioSource>();
-    VideoPlayer videoPlayer;    //smazat
 
     [Header("Audio sources")]
     [SerializeField] private AudioSource walkSound;
@@ -71,9 +70,6 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         postFx.profile.TryGetSettings(out vignette);
-
-        videoPlayer = GameObject.Find("Pause menu video player").GetComponent<VideoPlayer>();    //smazat
-        videoPlayer.Pause();    //smazat
 
         if (postFx == null)
         {
@@ -332,7 +328,6 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        videoPlayer.Play();    //smazat
     }
 
     /// <summary>
@@ -351,7 +346,6 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 1;
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        videoPlayer.Pause();    //smazat
     }
 
 

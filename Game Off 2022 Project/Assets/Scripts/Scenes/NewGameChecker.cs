@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 public class NewGameChecker : MonoBehaviour
 {
-    private void Start()
+    private void Awake()
     {
-        if (PlayerPrefs.GetInt("currentLevel") != 0)
+        if (PlayerPrefs.GetInt("currentLevel", 0) == 0)
         {
             GetComponent<Button>().interactable = false;
         }

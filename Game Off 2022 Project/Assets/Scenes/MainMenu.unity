@@ -179,7 +179,7 @@ MonoBehaviour:
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.4274208, g: 0.8018868, b: 0.56384075, a: 1}
   clickColor: {r: 0.90588236, g: 0.82056993, b: 0.1607843, a: 1}
-  text: {fileID: 1399629184}
+  disableColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.9}
   playSounds: 1
 --- !u!114 &77968206
 MonoBehaviour:
@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 122359398}
   - component: {fileID: 122359397}
   - component: {fileID: 122359396}
+  - component: {fileID: 122359399}
   m_Layer: 5
   m_Name: Reset progress
   m_TagString: Untagged
@@ -312,7 +313,7 @@ MonoBehaviour:
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.4274208, g: 0.8018868, b: 0.56384075, a: 1}
   clickColor: {r: 0.90588236, g: 0.82056993, b: 0.1607843, a: 1}
-  text: {fileID: 409130187}
+  disableColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.9}
   playSounds: 1
 --- !u!114 &122359397
 MonoBehaviour:
@@ -358,10 +359,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1850989183}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 122359399}
+        m_TargetAssemblyTypeName: ResetProgress, Assembly-CSharp
+        m_MethodName: ResetPlayerPrefs
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -369,18 +370,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1774162423}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Game
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &122359398
 CanvasRenderer:
@@ -390,6 +379,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122359394}
   m_CullTransparentMesh: 1
+--- !u!114 &122359399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122359394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3384f1c782814314d869d35bf9ce24ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &193377067 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5780679527799366051, guid: 00ab549db14fd104992b0e819f293142, type: 3}
@@ -509,7 +510,7 @@ MonoBehaviour:
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.4274208, g: 0.8018868, b: 0.56384075, a: 1}
   clickColor: {r: 0.90588236, g: 0.82056993, b: 0.1607843, a: 1}
-  text: {fileID: 424619679}
+  disableColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.9}
   playSounds: 1
 --- !u!114 &394618340
 MonoBehaviour:
@@ -1218,7 +1219,7 @@ MonoBehaviour:
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.4274208, g: 0.8018868, b: 0.56384075, a: 1}
   clickColor: {r: 0.90588236, g: 0.82056993, b: 0.1607843, a: 1}
-  text: {fileID: 777024499}
+  disableColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.9}
   playSounds: 1
 --- !u!114 &496453849
 MonoBehaviour:
@@ -1453,39 +1454,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonHover: {fileID: 8300000, guid: 82735e57c4047f94880cca37c045e557, type: 3}
   buttonClick: {fileID: 8300000, guid: c635bc3fac7df3742af85a8dbaaf0949, type: 3}
---- !u!1 &562977288
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 562977289}
-  m_Layer: 0
-  m_Name: Controllers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &562977289
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 562977288}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1474813931}
-  - {fileID: 1048424251}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &671684943
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,7 +1813,7 @@ MonoBehaviour:
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.42, g: 0.8, b: 0.56, a: 1}
   clickColor: {r: 0.9, g: 0.82, b: 0.16, a: 1}
-  text: {fileID: 1037227721}
+  disableColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.9}
   playSounds: 1
 --- !u!114 &700229348
 MonoBehaviour:
@@ -2596,13 +2564,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1048424250}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 562977289}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1048424252
 MonoBehaviour:
@@ -2671,7 +2639,7 @@ MonoBehaviour:
   baseColor: {r: 1, g: 1, b: 1, a: 1}
   hoverColor: {r: 0.4274208, g: 0.8018868, b: 0.56384075, a: 1}
   clickColor: {r: 0.90588236, g: 0.82056993, b: 0.1607843, a: 1}
-  text: {fileID: 2051845962}
+  disableColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.9}
   playSounds: 1
 --- !u!114 &1148538364
 MonoBehaviour:
@@ -2929,8 +2897,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 562977289}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1474813932
 MonoBehaviour:

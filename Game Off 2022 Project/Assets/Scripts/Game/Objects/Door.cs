@@ -3,8 +3,8 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     private bool isOpen = false;
-    [SerializeField] private bool isLocked = false;
-    [SerializeField] private bool inwards = false;
+    [SerializeField, Tooltip("Determines whether the door is locked or can be opened")] private bool isLocked = false;
+    [SerializeField, Tooltip("Determines whether the door opens in or out")] private bool inwards = false;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip unlocked;
     [SerializeField] private AudioClip locked;

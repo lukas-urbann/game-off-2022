@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 0}
+  m_Sun: {fileID: 431226369}
   m_IndirectSpecularColor: {r: 0.11991653, g: 0.003713672, b: 0.00036552228, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 91d8cbb855d975448b666a2013048f6c, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 0338f0539b0eb1d4a833251b262031eb, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -508,6 +508,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6700837621556723996, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
+      propertyPath: menuObj
+      value: 
+      objectReference: {fileID: 1120597962}
     - target: {fileID: 6700837621556723999, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -515,6 +519,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4892726340506522864, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
+--- !u!114 &488810819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6700837621556723996, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
+  m_PrefabInstance: {fileID: 488810818}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c681d35bc073fa540a9fffe289a4018f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &750590799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -864,6 +879,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4123775504741680189, guid: b4c64fcb88094b34180657685339e87b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 488810819}
+    - target: {fileID: 4123775504741680189, guid: b4c64fcb88094b34180657685339e87b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4123775504741680189, guid: b4c64fcb88094b34180657685339e87b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerController, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4123775505976121969, guid: b4c64fcb88094b34180657685339e87b, type: 3}
       propertyPath: m_Name
       value: UI
@@ -954,6 +981,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4c64fcb88094b34180657685339e87b, type: 3}
+--- !u!1 &1120597962 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4123775506236202027, guid: b4c64fcb88094b34180657685339e87b, type: 3}
+  m_PrefabInstance: {fileID: 1120597961}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1359054180
 PrefabInstance:
   m_ObjectHideFlags: 0
