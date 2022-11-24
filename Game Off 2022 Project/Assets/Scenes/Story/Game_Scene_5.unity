@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4315092136314739642, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
       propertyPath: BlockCount
-      value: 512
+      value: 425
       objectReference: {fileID: 0}
     - target: {fileID: 4892726340506522864, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
       propertyPath: m_Enabled
