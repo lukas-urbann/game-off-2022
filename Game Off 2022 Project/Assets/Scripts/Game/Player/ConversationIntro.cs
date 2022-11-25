@@ -33,7 +33,7 @@ public class ConversationIntro : MonoBehaviour
 
         PlayNextVoiceLine();    //door open
 
-        yield return new WaitForSecondsRealtime(1.4f);
+        yield return new WaitForSecondsRealtime(1.2f);
 
         PlayNextVoiceLine();     //mum   
 
@@ -57,9 +57,9 @@ public class ConversationIntro : MonoBehaviour
 
     private void PlayNextVoiceLine()
     {
-        audioSource.clip = dabings.ElementAt(currentVoiceLine);
+        //audioSource.clip = dabings.ElementAt(currentVoiceLine);
         subtitle.text = subtitles.ElementAt(currentVoiceLine);
-        audioSource.Play();
+        audioSource.PlayOneShot(dabings.ElementAt(currentVoiceLine));
         currentVoiceLine++;
     }
 }
