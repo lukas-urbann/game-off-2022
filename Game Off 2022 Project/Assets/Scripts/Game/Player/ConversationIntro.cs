@@ -51,7 +51,7 @@ public class ConversationIntro : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(2f);
 
-        audioSource.clip = null;
+        audioSource.clip = null;                                    
         subtitle.text = "";
     }
 

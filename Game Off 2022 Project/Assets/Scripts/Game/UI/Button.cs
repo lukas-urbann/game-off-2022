@@ -34,6 +34,7 @@ namespace Game.UI
             if (!button.interactable)
             {
                 text.color = disableColor;
+                return;
             }
         }
 
@@ -41,6 +42,7 @@ namespace Game.UI
         {
             if (!button.interactable)
             {
+                text.color = disableColor;
                 return;
             }
             text.color = hoverColor;
@@ -55,6 +57,7 @@ namespace Game.UI
         {
             if (!button.interactable)
             {
+                text.color = disableColor;
                 return;
             }
             text.color = baseColor;
@@ -64,6 +67,7 @@ namespace Game.UI
         {
             if (!button.interactable)
             {
+                text.color = disableColor;
                 return;
             }
             text.color = clickColor;
@@ -78,6 +82,7 @@ namespace Game.UI
         {
             if (!button.interactable)
             {
+                text.color = disableColor;
                 return;
             }
             text.color = baseColor;

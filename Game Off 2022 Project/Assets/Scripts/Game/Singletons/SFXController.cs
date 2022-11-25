@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Singletons
@@ -10,7 +7,7 @@ namespace Singletons
         public static SFXController Instance;
         private static AudioSource defaultAudioSource;
 
-        public AudioClip buttonHover, buttonClick;
+        [SerializeField] private AudioClip buttonHover, buttonClick;
         
         private void Awake()
         {
