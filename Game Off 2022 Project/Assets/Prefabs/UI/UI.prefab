@@ -1256,7 +1256,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: InputSystemFirstPersonCharacter, Assembly-CSharp
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
