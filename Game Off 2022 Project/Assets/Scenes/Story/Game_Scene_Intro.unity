@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 145129345}
   - component: {fileID: 145129346}
   - component: {fileID: 145129347}
+  - component: {fileID: 145129348}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -388,6 +389,20 @@ MonoBehaviour:
   tipOfTheDay: {fileID: 1550165070}
   clicheString: []
   discordController: {fileID: 0}
+--- !u!114 &145129348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145129338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a26aad5ea9eae7478edfa97804884d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim:
+  - {fileID: 145129344}
 --- !u!1 &159476244
 GameObject:
   m_ObjectHideFlags: 0
