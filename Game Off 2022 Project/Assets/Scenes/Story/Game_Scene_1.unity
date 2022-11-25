@@ -158,7 +158,7 @@ Transform:
   - {fileID: 1133074078}
   - {fileID: 331415970}
   m_Father: {fileID: 1771054854}
-  m_RootOrder: 95
+  m_RootOrder: 87
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -180}
 --- !u!4 &16189906 stripped
 Transform:
@@ -824,7 +824,7 @@ Transform:
   - {fileID: 75337476}
   - {fileID: 2089764576}
   m_Father: {fileID: 1771054854}
-  m_RootOrder: 87
+  m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: -180}
 --- !u!4 &81182977 stripped
 Transform:
@@ -5428,6 +5428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6700837621556723999, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
 --- !u!114 &738412331 stripped
@@ -6975,6 +6979,7 @@ GameObject:
   - component: {fileID: 1001309017}
   - component: {fileID: 1001309018}
   - component: {fileID: 1001309019}
+  - component: {fileID: 1001309020}
   m_Layer: 0
   m_Name: Intro Camera
   m_TagString: MainCamera
@@ -7173,6 +7178,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 95703b29f49b899499233ea7308bb800, type: 3}
   BlockCount: 512
+--- !u!114 &1001309020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001309011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a26aad5ea9eae7478edfa97804884d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim:
+  - {fileID: 1001309017}
 --- !u!1 &1003313874
 GameObject:
   m_ObjectHideFlags: 0
@@ -10657,7 +10676,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1771054854}
-  m_RootOrder: 140
+  m_RootOrder: 137
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -0.31}
 --- !u!4 &1406364408 stripped
 Transform:
@@ -13340,8 +13359,9 @@ Transform:
   - {fileID: 220583128}
   - {fileID: 337207076}
   - {fileID: 533377891}
-  - {fileID: 1497499064}
   - {fileID: 81038777}
+  - {fileID: 4817290}
+  - {fileID: 1497499064}
   - {fileID: 1384494195}
   - {fileID: 789352864}
   - {fileID: 16189906}
@@ -13349,7 +13369,6 @@ Transform:
   - {fileID: 1792206026}
   - {fileID: 766532756}
   - {fileID: 2142046151}
-  - {fileID: 4817290}
   - {fileID: 751444694}
   - {fileID: 1365432572}
   - {fileID: 1171452865}
@@ -13391,10 +13410,10 @@ Transform:
   - {fileID: 223498331}
   - {fileID: 980612710}
   - {fileID: 533292962}
+  - {fileID: 1403582526}
   - {fileID: 1399115733}
   - {fileID: 659944448}
   - {fileID: 139294642}
-  - {fileID: 1403582526}
   - {fileID: 1877588256}
   - {fileID: 322309183}
   - {fileID: 682117041}
