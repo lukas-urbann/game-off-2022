@@ -452,18 +452,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4315092136314739642, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4315092136314739642, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
-      propertyPath: BlockCount
-      value: 425
-      objectReference: {fileID: 0}
-    - target: {fileID: 4892726340506522864, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6700837621556723994, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -516,8 +504,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4892726340506522864, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
 --- !u!114 &488810819 stripped
 MonoBehaviour:
