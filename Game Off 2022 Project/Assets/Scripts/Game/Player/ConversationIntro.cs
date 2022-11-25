@@ -23,7 +23,7 @@ public class ConversationIntro : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(6.5f);
 
-        subtitle.text = "";
+        PlayNextVoiceLine();    //i really should study instead of sleeping
 
         yield return new WaitForSecondsRealtime(13f);
 
@@ -44,6 +44,10 @@ public class ConversationIntro : MonoBehaviour
         yield return new WaitForSecondsRealtime(1f);
 
         PlayNextVoiceLine();     //door shut
+
+        yield return new WaitForSecondsRealtime(2f);
+
+        PlayNextVoiceLine();     //i will lay down for a bit 
 
         yield return new WaitForSecondsRealtime(2f);
 

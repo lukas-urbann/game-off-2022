@@ -406,18 +406,22 @@ MonoBehaviour:
   audioSource: {fileID: 145129349}
   dabings:
   - {fileID: 8300000, guid: 7227ce9eaf044a845bb3a83e68a60ae8, type: 3}
+  - {fileID: 8300000, guid: aca626b6646cb3040b249bebd61829bd, type: 3}
   - {fileID: 8300000, guid: 42806ac577698b944b928f4c86437a70, type: 3}
   - {fileID: 8300000, guid: 31dae8770e89917468301744dc0db401, type: 3}
   - {fileID: 8300000, guid: 3184dc76e4bdac74794b29ffe4b859be, type: 3}
   - {fileID: 8300000, guid: ecf435926acf2f7498de8517b0d2fd97, type: 3}
   - {fileID: 8300000, guid: 6f8d53f5fcef8364b85ddff6effa21b5, type: 3}
+  - {fileID: 8300000, guid: 3e32c3344fa5dce4f99cb00373d6bc44, type: 3}
   subtitles:
   - '[waking up]'
+  - I really should study instead of sleeping...
   - '[knocking on a door]'
   - '[opens door]'
   - You're the reason why your father left us...
   - '[breaks things]'
   - '[closes door]'
+  - I will lay down for a bit
   subtitle: {fileID: 3614687727868011443}
 --- !u!82 &145129349
 AudioSource:
