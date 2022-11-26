@@ -263,7 +263,18 @@ public class PlayerController : MonoBehaviour
     {
         if (inputActions.FPSController.Interact.WasPressedThisFrame() && crosshair.C_State == Crosshair.CrosshairState.interactable)
         {
-            crosshair.Interactable().Interact();
+            switch (crosshair.interactableType)
+            {
+                case Crosshair.InteractableType.Lukas:
+                    crosshair.CallInteractableObject();
+                    break;
+                case Crosshair.InteractableType.Normal:
+                    crosshair.Interactable().Interact();
+                    break;
+                default:
+                    Debug.Log("Unknown Interactable Object");
+                    break;
+            }
         }
     }
     
