@@ -6,6 +6,8 @@ using UnityEngine.Rendering.PostProcessing;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+    
     #region Variables
     [Header("Input system")]                                                         
     [SerializeField] private Crosshair crosshair;
@@ -65,6 +67,11 @@ public class PlayerController : MonoBehaviour
     {
         //cam = Camera.main; Tohle tu být nemůže kvůli tomu jak se přepínaj cutscény
         inputActions = new InputSystemFirstPersonControls();
+
+        if (Instance != null && Instance != this)
+            Destroy(this);
+        else
+            Instance = this;
     }
 
     private void Start()
