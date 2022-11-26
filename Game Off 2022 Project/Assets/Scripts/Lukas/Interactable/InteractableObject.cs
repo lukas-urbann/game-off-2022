@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Lukas.Interactable
 {
     [RequireComponent(typeof(cakeslice.Outline))]
+    [RequireComponent(typeof(Collider))]
     public class InteractableObject : MonoBehaviour
     {
         [SerializeField] protected string ItemDescription;
@@ -19,11 +20,11 @@ namespace Lukas.Interactable
             return ItemDescription;
         }
         
-        protected virtual void PrivateInteraction() {}
+        public virtual void PrivateInteraction() {}
     }
 
     public interface IInteractableObject
     {
-        
+        public void PrivateInteraction();
     }
 }
