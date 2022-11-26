@@ -69,6 +69,12 @@ namespace Scenes
             StartLoading(PlayerPrefs.GetInt("currentLevel", 1));
         }
 
+        public void RestartLevel()
+        {
+            StartLoading(SceneManager.GetActiveScene().buildIndex);
+
+        }
+
         public void StartLoading(string sceneName)
         {
             tipOfTheDay.text = clicheString[Random.Range(0, clicheString.Count - 1)];
