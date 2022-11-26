@@ -13,6 +13,7 @@ public class DiscordController : MonoBehaviour
 
     private static bool instanceExists;
     private Discord.Discord discord;
+    private ActivityManager activityManager;
 
     private void Awake()
     {
@@ -66,7 +67,7 @@ public class DiscordController : MonoBehaviour
     {
         try
         {
-            var activityManager = discord.GetActivityManager();
+            activityManager = discord.GetActivityManager();
             var activity = new Discord.Activity
             {
                 Details = details,
@@ -96,6 +97,18 @@ public class DiscordController : MonoBehaviour
         {
             Debug.Log("Discord is not running");
             Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        try
+        {
+            activityManager = discord.GetActivityManager();
+            activityManager.ClearActivity((result) => {});
+        }
+        catch
+        {
         }
     }
 

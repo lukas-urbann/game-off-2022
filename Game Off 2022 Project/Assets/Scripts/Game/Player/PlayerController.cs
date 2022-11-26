@@ -371,16 +371,18 @@ public class PlayerController : MonoBehaviour
                     walkSound.clip = null;
                     break;
                 case WalkingState.walking:
+                    walkSound.Stop();
                     walkSound.clip = walking;
                     walkSound.Play();
                     break;
                 case WalkingState.running:
+                    walkSound.Stop();
                     walkSound.clip = running;
                     walkSound.Play();
                     break;
                 case WalkingState.exhausted:
-                    walkSound.clip = exhausted;
-                    walkSound.Play();
+                    walkSound.Stop();    
+                    walkSound.PlayOneShot(exhausted);
                     break;
                 default:
                     Debug.LogError("Unknown WalkingState: " + walkingState);

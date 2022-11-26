@@ -69,6 +69,12 @@ namespace Scenes
             StartLoading(PlayerPrefs.GetInt("currentLevel", 1));
         }
 
+        public void RestartLevel()
+        {
+            StartLoading(SceneManager.GetActiveScene().buildIndex);
+
+        }
+
         public void StartLoading(string sceneName)
         {
             tipOfTheDay.text = clicheString[Random.Range(0, clicheString.Count - 1)];
@@ -108,7 +114,7 @@ namespace Scenes
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             loadingScreenGameObject.SetActive(true);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSecondsRealtime(3f);
             StartCoroutine(LoadAsynchronously(sceneName));
         }
 

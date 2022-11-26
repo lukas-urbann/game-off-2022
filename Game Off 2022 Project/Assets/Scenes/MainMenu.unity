@@ -2884,7 +2884,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dontDestroyList:
   - {fileID: 547809524}
-  - {fileID: 1512018967}
 --- !u!4 &1474813931
 Transform:
   m_ObjectHideFlags: 0
