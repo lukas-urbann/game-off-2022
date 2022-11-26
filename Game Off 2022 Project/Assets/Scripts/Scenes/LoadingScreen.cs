@@ -114,7 +114,7 @@ namespace Scenes
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             loadingScreenGameObject.SetActive(true);
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSecondsRealtime(3f);
             StartCoroutine(LoadAsynchronously(sceneName));
         }
 
