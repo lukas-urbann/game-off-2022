@@ -13,18 +13,18 @@ public class Interactable : MonoBehaviour
         if (name.Contains("_interactable") && PlayerPrefs.GetInt(name, 0) == 1)
         {
             Debug.Log("Player already has a" + name + ". Destroying radio gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
         if (name.Equals("Baterkos") && PlayerPrefs.GetInt("Baterkos", 0) == 1) 
         {
             Debug.Log("Player already has a flashlight. Destroying flashlight gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else if (gameObject.name.Equals("Radios") && PlayerPrefs.GetInt("Radios", 0) == 1)
         {
             Debug.Log("Player already has a radio. Destroying radio gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 
@@ -54,9 +54,13 @@ public class Interactable : MonoBehaviour
         }
         else if (name.Contains("_interactable"))
         {
+            if(GetComponent<Lukas.Interactable.InteractableObject>() != null)
+                GetComponent<Lukas.Interactable.InteractableObject>().Interact();
+            //opovaž se to vodsaď oddělat
+            
             PlayerPrefs.SetInt(gameObject.name, 1); //"picking up" a object
             SFXController.Instance.PlayPickUp();
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
         else
         {

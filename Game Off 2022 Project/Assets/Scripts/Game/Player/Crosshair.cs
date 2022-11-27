@@ -55,7 +55,8 @@ public class Crosshair : MonoBehaviour
                 UpdateUI(true, hit.transform.GetComponent<cakeslice.Outline>());
                 interactableType = InteractableType.Lukas;
                 
-                return;
+                if(lukasObj.ReturnOverrideLegacy())
+                    return;
             }
             else
             {
@@ -162,9 +163,6 @@ public class Crosshair : MonoBehaviour
 
     public Interactable Interactable()
     {
-        if(GetComponent<Lukas.Interactable.InteractableObject>() != null)
-            GetComponent<Lukas.Interactable.InteractableObject>().Interact();
-        
         return temp_outline.GetComponent<Interactable>();
     }
 

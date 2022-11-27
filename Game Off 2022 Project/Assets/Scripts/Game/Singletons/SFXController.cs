@@ -8,6 +8,7 @@ namespace Singletons
         public static SFXController Instance;
         private static AudioSource defaultAudioSource;
         private AudioSource pickUp;
+        public AudioClip pickUpSound; // ja te zabiju michale
 
         [SerializeField] private AudioClip buttonHover, buttonClick;
         
@@ -36,6 +37,7 @@ namespace Singletons
             {
                 Debug.LogWarning(ex.Message);
                 pickUp = gameObject.AddComponent<AudioSource>();
+                pickUp.clip = pickUpSound;
             }
         }
 
@@ -74,6 +76,11 @@ namespace Singletons
         public void Button_PlayClick()
         {
             defaultAudioSource.PlayOneShot(buttonClick);
+        }
+        
+        public void Interactable_PlayPickUp()
+        {
+            defaultAudioSource.PlayOneShot(pickUpSound);
         }
     }
 }

@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4469840334107228673}
   - component: {fileID: 4469840334107228678}
-  - component: {fileID: 4469840334107228672}
   - component: {fileID: 1165133875805480050}
+  - component: {fileID: 4469840334107228672}
   m_Layer: 0
   m_Name: SFX Controller
   m_TagString: Untagged
@@ -46,9 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b5e9a932507084c9c38621d81bf0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickUpSound: {fileID: 8300000, guid: 05f4dc5ae4f1ef5468e6076c2154530a, type: 3}
   buttonHover: {fileID: 8300000, guid: 82735e57c4047f94880cca37c045e557, type: 3}
   buttonClick: {fileID: 8300000, guid: c635bc3fac7df3742af85a8dbaaf0949, type: 3}
---- !u!82 &4469840334107228672
+--- !u!82 &1165133875805480050
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,21 +58,21 @@ AudioSource:
   m_GameObject: {fileID: 4469840334107228679}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 4533747284697658312, guid: 88f1701e03cc5994ba39744e129e38b9, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 05f4dc5ae4f1ef5468e6076c2154530a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.8
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 256
-  DopplerLevel: 0
-  MinDistance: 1980.198
-  MaxDistance: 2000
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 1
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -144,7 +145,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!82 &1165133875805480050
+--- !u!82 &4469840334107228672
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,21 +154,21 @@ AudioSource:
   m_GameObject: {fileID: 4469840334107228679}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
+  OutputAudioMixerGroup: {fileID: 4533747284697658312, guid: 88f1701e03cc5994ba39744e129e38b9, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 05f4dc5ae4f1ef5468e6076c2154530a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  Priority: 256
+  DopplerLevel: 0
+  MinDistance: 1980.198
+  MaxDistance: 2000
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

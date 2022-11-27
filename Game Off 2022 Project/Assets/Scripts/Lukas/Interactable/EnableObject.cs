@@ -13,6 +13,14 @@ namespace Lukas.Interactable
         {
             if(objectToEnable != null)
                 objectToEnable.SetActive(!disableObject);
+            /*
+            
+            //Additional check - if it for whatever reason doesn't disable the object
+            if(objectToEnable.activeSelf && disableObject)
+                Destroy(objectToEnable);
+            
+            gameObject.SetActive(false);
+            */
         }
     }
 }

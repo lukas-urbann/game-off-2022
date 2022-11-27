@@ -9,12 +9,22 @@ namespace Lukas.Interactable
     [RequireComponent(typeof(Collider))]
     public class InteractableObject : MonoBehaviour
     {
-        [SerializeField] protected string ItemDescription;
+        private bool OverrideLegacy = true;
+        protected string ItemDescription = "null";
 
         private void Start()
         {
-            if (ItemDescription.Equals("null") && GetComponent<Description>())
-                ItemDescription = GetComponent<Description>().description;
+            if (ItemDescription.Equals("null") && GetComponent<global::Description>() != null)
+                ItemDescription = GetComponent<global::Description>().description;
+
+            if (GetComponent<global::Interactable>() != null)
+                OverrideLegacy = false;
+            
+            if (GetComponent<Lukas.Interactable.DescriptionLukas>() != null)
+                ItemDescription = GetComponent<Lukas.Interactable.DescriptionLukas>().SetItemDescription();
+
+            if (ItemDescription.Equals("null"))
+                ItemDescription = "";
         }
 
         public void Interact()
@@ -28,6 +38,11 @@ namespace Lukas.Interactable
         }
         
         public virtual void PrivateInteraction() {}
+        
+        public bool ReturnOverrideLegacy()
+        {
+            return OverrideLegacy;
+        }
     }
 
     public interface IInteractableObject
