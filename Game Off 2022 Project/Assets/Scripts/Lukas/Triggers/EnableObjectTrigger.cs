@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Lukas.Triggers
 {
-    public class EnableObject : TriggerZone, ITriggerZone
+    public class EnableObjectTrigger : TriggerZone, ITriggerZone
     {
         public GameObject objectToEnable;
 

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Singletons
@@ -26,7 +27,16 @@ namespace Singletons
         {
             AudioSource [] temp = GetComponents<AudioSource>();
             defaultAudioSource = temp[0];
-            pickUp = temp[1];
+
+            try //aspoň sem dej podmínku nebo něco tyvole všude mi to teď háže errory, stejně je to celé funky tohle
+            {
+                pickUp = temp[1];
+            }
+            catch (IndexOutOfRangeException ex)
+            {
+                Debug.LogWarning(ex.Message);
+                pickUp = gameObject.AddComponent<AudioSource>();
+            }
         }
 
         /// <summary>

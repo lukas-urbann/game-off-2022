@@ -9380,58 +9380,13 @@ GameObject:
   - component: {fileID: 992671565}
   - component: {fileID: 992671564}
   - component: {fileID: 992671563}
-  - component: {fileID: 992671562}
-  - component: {fileID: 992671561}
-  - component: {fileID: 992671560}
   m_Layer: 0
-  m_Name: Cube (8)
+  m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &992671560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992671559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4c2cb26cf214714a1f248da4040e457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deleteAfterCollision: 1
-  objectToEnable: {fileID: 240643426}
---- !u!114 &992671561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992671559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89680ef58a5216e499c3b73162f4a9a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deleteAfterCollision: 1
-  clip: {fileID: 8300000, guid: 3b708de2448240e48bf213bea8ffa1bc, type: 3}
---- !u!114 &992671562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 992671559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4c2cb26cf214714a1f248da4040e457, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deleteAfterCollision: 1
-  objectToEnable: {fileID: 1049564133}
+  m_IsActive: 0
 --- !u!65 &992671563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9440,7 +9395,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992671559}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -9504,7 +9459,7 @@ Transform:
   m_GameObject: {fileID: 992671559}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.3, y: 8.072351, z: 4.39}
-  m_LocalScale: {x: 5.2294, y: 2.4012, z: 1}
+  m_LocalScale: {x: 10.971282, y: 10.221756, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -22267,6 +22222,7 @@ GameObject:
   - component: {fileID: 1186385969}
   - component: {fileID: 1186385968}
   - component: {fileID: 1186385967}
+  - component: {fileID: 1186385973}
   m_Layer: 0
   m_Name: mainDoorKey_interactable
   m_TagString: Object
@@ -22393,6 +22349,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1186385973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186385965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7e70f488d555904dab3e8049352dd78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemDescription: null
+  disableObject: 1
+  objectToEnable: {fileID: 992671559}
 --- !u!1 &1189420052
 GameObject:
   m_ObjectHideFlags: 0
@@ -27837,6 +27808,7 @@ GameObject:
   - component: {fileID: 1749350763}
   - component: {fileID: 1749350762}
   - component: {fileID: 1749350761}
+  - component: {fileID: 1749350766}
   m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
@@ -27931,13 +27903,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749350760}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.94, y: 2.8, z: -0.09}
-  m_LocalScale: {x: 15.138283, y: 7.627399, z: 1.021985}
+  m_LocalPosition: {x: 10.5713, y: 2.8, z: -0.09}
+  m_LocalScale: {x: 17.875284, y: 7.627399, z: 1.021985}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1749350766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1749350760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89680ef58a5216e499c3b73162f4a9a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteAfterCollision: 1
+  clip: {fileID: 8300000, guid: 9e328af0e6c08f74fa5a6ce0f59b0833, type: 3}
 --- !u!4 &1751462429 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3368259008202677131, guid: fe27da14c79d2554ca64fcc5c88fb7bc, type: 3}
@@ -32405,6 +32391,7 @@ GameObject:
   - component: {fileID: 2124077321}
   - component: {fileID: 2124077320}
   - component: {fileID: 2124077322}
+  - component: {fileID: 2124077323}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -32482,14 +32469,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124077315}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.3, y: 8.072351, z: 8.478}
-  m_LocalScale: {x: 5.2294, y: 2.4012, z: 1}
+  m_LocalRotation: {x: -0, y: 0.028411768, z: -0, w: 0.9995963}
+  m_LocalPosition: {x: 4.7871, y: 8.072351, z: 6.432}
+  m_LocalScale: {x: 7.5224924, y: 2.4012, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 3.256, z: 0}
 --- !u!114 &2124077320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32532,6 +32519,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
   objectToEnable: {fileID: 240643426}
+--- !u!114 &2124077323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124077315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4c2cb26cf214714a1f248da4040e457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteAfterCollision: 1
+  objectToEnable: {fileID: 992671559}
 --- !u!4 &2131138651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3368259008202677131, guid: fe27da14c79d2554ca64fcc5c88fb7bc, type: 3}
