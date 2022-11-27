@@ -45,9 +45,21 @@ namespace Singletons
         /// Plays an sound effect from default audio source
         /// </summary>
         /// <param name="sfx">effect to be played</param>
-        public void PlaySoundEffect(AudioClip sfx)
+        public void PlaySoundEffectOneShot(AudioClip sfx)
         {
             defaultAudioSource.PlayOneShot(sfx);
+        }
+
+        public void PlaySoundEffect(AudioClip clip)
+        {
+            defaultAudioSource.clip = clip;
+            defaultAudioSource.Play();
+        }
+        
+        public void StopAudioSource()
+        {
+            defaultAudioSource.Stop();
+            defaultAudioSource.clip = null;
         }
         
         /// <summary>
@@ -55,7 +67,7 @@ namespace Singletons
         /// </summary>
         /// <param name="sfx">effect to be played</param>
         /// <param name="audioSource">from which audio source</param>
-        public void PlaySoundEffect(AudioClip sfx, AudioSource audioSource)
+        public void PlaySoundEffectOneShot(AudioClip sfx, AudioSource audioSource)
         {
             audioSource.PlayOneShot(sfx);
         }
@@ -81,6 +93,11 @@ namespace Singletons
         public void Interactable_PlayPickUp()
         {
             defaultAudioSource.PlayOneShot(pickUpSound);
+        }
+
+        public void SetMasterState(float vol)
+        {
+            PlayerController.Instance.SetAudioListenerVolume(vol);
         }
     }
 }

@@ -54,7 +54,7 @@ namespace Lighting
         private void PlayFlashSound()
         {
             if (BooleanChecker.CheckSFXController())
-                SFXController.Instance.PlaySoundEffect(flashSound);
+                SFXController.Instance.PlaySoundEffectOneShot(flashSound);
         }
     }
 }

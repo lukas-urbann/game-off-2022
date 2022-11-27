@@ -1,6 +1,7 @@
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
+using Singletons;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
@@ -109,11 +110,15 @@ namespace Scenes
             catch
             {
             }
-            Time.timeScale = 1;
+            Time.timeScale = 0;
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             loadingScreenGameObject.SetActive(true);
+            SFXController.Instance.StopAudioSource();
+            SFXController.Instance.SetMasterState(0);
             yield return new WaitForSecondsRealtime(3f);
+            SFXController.Instance.SetMasterState(1);
+            Time.timeScale = 1;
             StartCoroutine(LoadAsynchronously(sceneName));
         }
 

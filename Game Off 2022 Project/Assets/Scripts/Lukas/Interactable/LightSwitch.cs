@@ -16,7 +16,7 @@ namespace Lukas.Interactable
 
         private void SwitchLights()
         {
-            SFXController.Instance.PlaySoundEffect(lightSwitch);
+            SFXController.Instance.PlaySoundEffectOneShot(lightSwitch);
             isOn = !isOn;
             light.enabled = isOn;
         }

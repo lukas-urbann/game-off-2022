@@ -6637,6 +6637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  PlayOneShot: 1
   clip: {fileID: 8300000, guid: 68e23d12535b2d745b83e977a1d33876, type: 3}
 --- !u!65 &665544313
 BoxCollider:
@@ -10192,6 +10193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  PlayOneShot: 1
   clip: {fileID: 8300000, guid: b6128982fa7618748977768965647ffb, type: 3}
 --- !u!65 &1037657363
 BoxCollider:
@@ -15135,6 +15137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  PlayOneShot: 0
   clip: {fileID: 8300000, guid: 65e93f5a79fc9cc4988553b028f9fdc5, type: 3}
 --- !u!65 &1049564135
 BoxCollider:
@@ -22786,6 +22789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  PlayOneShot: 1
   clip: {fileID: 8300000, guid: 9f2b3640c087cec46b5ebaf388a70868, type: 3}
 --- !u!65 &1205099226
 BoxCollider:
@@ -27934,6 +27938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  PlayOneShot: 1
   clip: {fileID: 8300000, guid: 9e328af0e6c08f74fa5a6ce0f59b0833, type: 3}
 --- !u!4 &1751462429 stripped
 Transform:
@@ -29785,6 +29790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  PlayOneShot: 1
   clip: {fileID: 8300000, guid: 8a7655aa667e2dd47a384978ecebf4fa, type: 3}
 --- !u!65 &1942511517
 BoxCollider:
@@ -31735,6 +31741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  PlayOneShot: 1
   clip: {fileID: 8300000, guid: 3b3e4ac3734b74e4abbeaaf39f97fe47, type: 3}
 --- !u!65 &2081425554
 BoxCollider:
@@ -32219,14 +32226,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103675004}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.22, y: 2.97, z: 4.77}
-  m_LocalScale: {x: 48.626743, y: 7.125133, z: 1.9171126}
+  m_LocalRotation: {x: -0, y: -0.7118157, z: -0, w: 0.7023663}
+  m_LocalPosition: {x: 6, y: 2.97, z: 6.4154}
+  m_LocalScale: {x: 16.43822, y: 7.125133, z: 1.9171126}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90.766, z: 0}
 --- !u!114 &2103675010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32240,6 +32247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  PlayOneShot: 1
   clip: {fileID: 8300000, guid: 4ea3cb6937f668041b09d4055653b72b, type: 3}
 --- !u!1001 &2108503725
 PrefabInstance:
@@ -32505,6 +32513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  PlayOneShot: 1
   clip: {fileID: 8300000, guid: 3b708de2448240e48bf213bea8ffa1bc, type: 3}
 --- !u!114 &2124077321
 MonoBehaviour:
@@ -32906,15 +32915,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148780354780}
-  m_LocalRotation: {x: 0.7151007, y: 0.06790848, z: -0.08059323, w: 0.6910313}
-  m_LocalPosition: {x: -14.769, y: 6.413, z: -25.458}
+  m_LocalRotation: {x: 0.5512671, y: 0.43868923, z: -0.46256733, w: 0.5382266}
+  m_LocalPosition: {x: -14.769, y: 6.413, z: -25.666}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1045831297}
   m_Father: {fileID: 1771054854}
   m_RootOrder: 164
-  m_LocalEulerAnglesHint: {x: 92.20502, y: 33.817993, z: 21.761002}
+  m_LocalEulerAnglesHint: {x: 92.20502, y: 100.958, z: 21.761002}
 --- !u!33 &587557158867299548
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -19,7 +19,7 @@ namespace Lukas.Triggers
         public override void PrivateInteractionEnter()
         {
             StartCoroutine(Appear());
-            SFXController.Instance.PlaySoundEffect(scare);
+            SFXController.Instance.PlaySoundEffectOneShot(scare);
         }
 
         private IEnumerator Appear()

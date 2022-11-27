@@ -366,6 +366,12 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    public void SetAudioListenerVolume(float vol)
+    {
+        float newVol = AudioListener.volume;
+        newVol = vol;
+        AudioListener.volume = newVol;
+    }
 
     private void SetWalkingState(WalkingState walkingState)
     {

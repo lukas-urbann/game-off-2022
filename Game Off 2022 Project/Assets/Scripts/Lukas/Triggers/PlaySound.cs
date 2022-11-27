@@ -7,11 +7,15 @@ namespace Lukas.Triggers
 {
     public class PlaySound : TriggerZone, ITriggerZone
     {
+        [SerializeField] private bool PlayOneShot = true;
         public AudioClip clip;
-        
+
         public override void PrivateInteractionEnter()
         {
-            SFXController.Instance.PlaySoundEffect(clip);
+            if(PlayOneShot)
+                SFXController.Instance.PlaySoundEffectOneShot(clip);
+            else
+                SFXController.Instance.PlaySoundEffect(clip);
         }
     }
 }

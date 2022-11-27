@@ -11,7 +11,7 @@ namespace Lukas.Interactable
         
         public override void PrivateInteraction()
         {
-            SFXController.Instance.PlaySoundEffect(notHungry);
+            SFXController.Instance.PlaySoundEffectOneShot(notHungry);
         }
     }
 }
