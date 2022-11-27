@@ -2487,6 +2487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 7826757391395804337, guid: 98314ba9dbdc7e6408514e5159b5c3db, type: 3}
+      propertyPath: isLocked
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98314ba9dbdc7e6408514e5159b5c3db, type: 3}
 --- !u!4 &204246605 stripped

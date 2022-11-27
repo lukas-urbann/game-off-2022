@@ -233,6 +233,8 @@ MonoBehaviour:
   audioSource: {fileID: 7826757391395804339}
   unlocked: {fileID: 8300000, guid: 31dae8770e89917468301744dc0db401, type: 3}
   locked: {fileID: 8300000, guid: 42806ac577698b944b928f4c86437a70, type: 3}
+  needsKey: 0
+  keyName: 
 --- !u!114 &7826757391395804338
 MonoBehaviour:
   m_ObjectHideFlags: 0

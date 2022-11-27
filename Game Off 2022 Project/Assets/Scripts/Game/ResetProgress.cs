@@ -5,6 +5,6 @@ public class ResetProgress : MonoBehaviour
     public void ResetPlayerPrefs()
     {
         PlayerPrefs.DeleteAll();
-        Debug.Log("PlayeerPrefs deleted");
+        Debug.Log("PlayerPrefs deleted");
     }
 }
