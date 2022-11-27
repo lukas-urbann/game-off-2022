@@ -8,6 +8,8 @@ public class Door : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip unlocked;
     [SerializeField] private AudioClip locked;
+    [SerializeField] private bool needsKey;
+    [SerializeField] private string keyName;
 
     private void Start()
     {
@@ -29,6 +31,12 @@ public class Door : MonoBehaviour
         }
         else
         {
+            if (needsKey && PlayerPrefs.GetInt(keyName, 0) == 0)
+            {
+                GetComponent<Description>().description = "I need to find a key";
+                audioSource.PlayOneShot(locked);
+                return;
+            }
             audioSource.clip = unlocked;
             if (isOpen)
             {

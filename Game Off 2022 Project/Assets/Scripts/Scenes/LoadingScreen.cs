@@ -72,7 +72,6 @@ namespace Scenes
         public void RestartLevel()
         {
             StartLoading(SceneManager.GetActiveScene().buildIndex);
-
         }
 
         public void StartLoading(string sceneName)

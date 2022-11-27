@@ -604,7 +604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6700837621556723994
 Transform:
   m_ObjectHideFlags: 0
@@ -635,7 +635,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
-  m_SlopeLimit: 30
+  m_SlopeLimit: 50
   m_StepOffset: 0.4
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -823,6 +823,7 @@ MonoBehaviour:
   c_normal: {fileID: 21300000, guid: 53175996ed72a27428e186a67093f3d3, type: 3}
   c_interactable: {fileID: 21300000, guid: a5ca448333eba9644b27496f4e7b26e3, type: 3}
   reach: 2
+  interactableType: 0
 --- !u!114 &4892726340506522865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1183,9 +1184,9 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
+  m_Intensity: 1.5
+  m_Range: 15
+  m_SpotAngle: 45
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -1214,7 +1215,7 @@ Light:
       e32: 0
       e33: 1
     m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
+  m_Cookie: {fileID: 2800000, guid: fc05716dccaf99f469515cc3013b2bc8, type: 3}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0

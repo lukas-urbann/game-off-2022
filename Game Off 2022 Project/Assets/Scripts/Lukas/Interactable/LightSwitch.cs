@@ -5,7 +5,7 @@ namespace Lukas.Interactable
 {
     public class LightSwitch : InteractableObject, IInteractableObject
     {
-        [SerializeField] private Light light;
+        [SerializeField] private new Light light;
         [SerializeField] private bool isOn = false;
         public AudioClip lightSwitch;
 

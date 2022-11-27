@@ -1,5 +1,11 @@
 using UnityEngine;
+using cakeslice;
+using Scenes;
+using UnityEngine.SceneManagement;
+using Singletons;
 
+[RequireComponent(typeof(Outline))]
+[RequireComponent(typeof(Collider))]
 public class Interactable : MonoBehaviour
 {
     private void Awake()
@@ -42,9 +48,14 @@ public class Interactable : MonoBehaviour
         {
             GameObject.Find("Padlock UI").GetComponent<Padlock>().StartPadlock();
         }
+        else if (name.Equals("teleport"))
+        {
+            LoadingScreen.Instance.StartLoading(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         else if (name.Contains("_interactable"))
         {
             PlayerPrefs.SetInt(gameObject.name, 1); //"picking up" a object
+            SFXController.Instance.PlayPickUp();
             Destroy(gameObject);
         }
         else

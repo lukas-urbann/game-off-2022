@@ -10,6 +10,12 @@ namespace Scenes.Intro
         [SerializeField] private int animatorIndex = 0;
         [SerializeField] private Animator[] anims;
 
+        private void Start()
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
         private void OnEnable()
         {
             foreach (Animator anim in anims)
