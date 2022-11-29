@@ -5,7 +5,7 @@ using Scenes;
 public class FinalCam : MonoBehaviour
 {
     private float time = 0f;
-    public bool isDrug = false;
+    private bool isDrug = false;
 
     [Header("PostFX")]
     [SerializeField] private PostProcessVolume postFx;
@@ -21,11 +21,17 @@ public class FinalCam : MonoBehaviour
         if (isDrug)
         {
             time += Time.deltaTime;
-            if (time > 5.5f)
+            if (time > 5f)
             {
                 LoadingScreen.Instance.StartLoading("Game_Scene_5");
+                isDrug = false;
             }
             vignette.intensity.value = PlayerController.MapToRange(0.406f, 1f, 0f, 5f, time);
         }
+    }
+
+    public void IsDrug()
+    {
+        isDrug = true;
     }
 }

@@ -97,7 +97,14 @@ namespace Singletons
 
         public void SetMasterState(float vol)
         {
-            PlayerController.Instance.SetAudioListenerVolume(vol);
+            try
+            {
+                PlayerController.Instance.SetAudioListenerVolume(vol);
+            }
+            catch (Exception e)
+            {
+                Debug.LogError(e);
+            }
         }
     }
 }
