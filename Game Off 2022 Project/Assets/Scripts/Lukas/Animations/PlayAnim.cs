@@ -6,12 +6,11 @@ using UnityEngine;
 
 namespace Lukas.Animations
 {
-    public class PlayAnim : TriggerZone, ITriggerZone, IInteractableObject
+    public class PlayAnim : TriggerZone, ITriggerZone
     {
         public string animName;
         public Animator anim;
         public bool independent;
-        public bool requireItems;
 
         public void PlaySelectedAnimationIndependent()
         {
@@ -28,22 +27,9 @@ namespace Lukas.Animations
         {
             if (anim == null && GetComponent<Animator>() != null)
                 anim = GetComponent<Animator>();
-            else
-                Debug.Log("Animator not assigned");
             
             if(anim != null)
                 anim.Play(animName);
-        }
-
-        public void PrivateInteraction()
-        {
-            if(requireItems)
-                if (GetComponent<RemoveItem>() != null)
-                    return;
-            
-            Debug.Log("asdasdasdsad");
-            
-            PlaySelectedAnimation();
         }
     }
 }

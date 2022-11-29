@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Linq;
 using Lukas.Objective;
 using Lukas.Player;
 using UnityEngine;
@@ -9,58 +8,40 @@ namespace Lukas.Interactable
 {
     public class RemoveItem : InteractableObject, IInteractableObject
     {
-        [SerializeField] private string[] itemName;
+        [SerializeField] private string itemName;
         private bool didRemoveItem = false;
         public string itemNotFound = "";
         
         public override void PrivateInteraction()
         {
-            //Pojebanej kanon potrebuje 2 itemy...
-            var itemNameList = itemName.ToList();
-            int index = 0;
-            
-            foreach (string item in itemName)
+            if (Inventory.Instance.CheckItem(itemName))
             {
-                if (Inventory.Instance.CheckItem(item))
-                {
-                    Inventory.Instance.RemoveItem(item);
+                Inventory.Instance.RemoveItem(itemName);
 
-                    if(item == itemNameList[index])
-                        itemNameList.RemoveAt(index);
-
-                    
-                }
-                else
+                if (GetComponent<EnableObject>() != null)
                 {
-                    string missingItems = "";
-                    
-                    for (int i = 0; i < itemName.Length; i++)
-                    {
-                        missingItems += " [" + itemName[i] + "]";
-                    }
-                    
-                    if (itemNotFound.Equals("self-type"))
-                        itemNotFound = "You need to have" + missingItems + " to be able to interact!";
-                
-                    Mission.Instance.UpdateMission(itemNotFound, 3);
+                    EnableObject obj = GetComponent<EnableObject>();
+                    obj.EnableForceCall();
+                    obj.Interact();
+                    //kms
                 }
-                index++;
                 
-                if (itemName.Length == 0 || itemName == null)
+                if (GetComponent<PlayAnimInteractable>() != null)
                 {
-                    if (GetComponent<EnableObject>() != null)
-                    {
-                        EnableObject obj = GetComponent<EnableObject>();
-                        obj.EnableForceCall();
-                        obj.Interact();
-                        //kms
-                    }
-                        
-                    Destroy(GetComponent<RemoveItem>());
+                    PlayAnimInteractable obj = GetComponent<PlayAnimInteractable>();
+                    obj.PlaySelectedAnimation();
+                    //kms
                 }
+                    
+                Destroy(GetComponent<RemoveItem>());
             }
-
-            itemName = itemNameList.ToArray();
+            else
+            {
+                if (itemNotFound.Equals("self-type"))
+                    itemNotFound = "You need to have [" + itemName + "] to be able to interact!";
+                
+                Mission.Instance.UpdateMission(itemNotFound, 3);
+            }
         }
     }
 }
