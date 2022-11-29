@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-9015383362563422368
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 71d55e4b75a3e7343a46932a5b8da9c0
+  m_EffectName: Attenuation
+  m_MixLevel: 38227b3c969292048b3392fbac82026e
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-5967634477761207315
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -41,6 +55,7 @@ AudioMixerController:
     - 0e1b7093f4688594f9ef8b98e96362e9
     - 1a8a7958567ad6f4ebd567752730abf2
     - acb91eeb6e47ff74aa7aac473f107a55
+    - f05fe44358115ba4ba97486754da5bc5
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -112,6 +127,25 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &1982504536221129487
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Trump
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: f05fe44358115ba4ba97486754da5bc5
+  m_Children: []
+  m_Volume: fbc8fae9d01383f4a9009f9c2712b7d5
+  m_Pitch: 358c9e762be53404d8645819a9b9772b
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -9015383362563422368}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!243 &4533747284697658312
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -121,7 +155,8 @@ AudioMixerGroupController:
   m_Name: SFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: acb91eeb6e47ff74aa7aac473f107a55
-  m_Children: []
+  m_Children:
+  - {fileID: 1982504536221129487}
   m_Volume: 161e435891ce47b40821a15cb1e40350
   m_Pitch: 6560f7ac82dcc044b88821f3758cf79a
   m_Send: 00000000000000000000000000000000

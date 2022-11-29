@@ -7395,6 +7395,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6700837621556723999, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
 --- !u!114 &738412331 stripped
@@ -34909,6 +34913,7 @@ GameObject:
   - component: {fileID: 9040253908611354144}
   - component: {fileID: 9040253908611354143}
   - component: {fileID: 9040253908611354142}
+  - component: {fileID: 9040253908611354145}
   m_Layer: 0
   m_Name: tv
   m_TagString: Untagged
@@ -34957,6 +34962,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3734136656694947978, guid: 57ab9bb298a131c4cab773b28214e189, type: 3}
+--- !u!114 &9040253908611354145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9040253908611354141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593e513e93e0b194d811a008b33c6ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemDescription: Play some nice movies
 --- !u!64 &9155728583214763206
 MeshCollider:
   m_ObjectHideFlags: 0

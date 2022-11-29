@@ -338,7 +338,7 @@ public class PlayerController : MonoBehaviour
         }
         foreach (AudioSource audioSource in sources)
         {
-            audioSource.Stop();
+            audioSource.Pause();
         }
 
         isPaused = true;

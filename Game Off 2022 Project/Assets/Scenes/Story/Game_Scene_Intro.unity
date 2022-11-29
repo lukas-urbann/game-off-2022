@@ -2705,6 +2705,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Subtitles
       objectReference: {fileID: 0}
+    - target: {fileID: 8720420102353407044, guid: 137d2a8afc3ec944dacaf3546e86c2eb, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: d4727af8859e0f64ea7f8c806381fad8, type: 2}
+    - target: {fileID: 8720420102353407044, guid: 137d2a8afc3ec944dacaf3546e86c2eb, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 168037232833593070, guid: d4727af8859e0f64ea7f8c806381fad8, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 137d2a8afc3ec944dacaf3546e86c2eb, type: 3}
 --- !u!224 &3614687727868011442 stripped
