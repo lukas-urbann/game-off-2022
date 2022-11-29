@@ -9,7 +9,9 @@ namespace Scenes.Act1
         private void Start()
         {
             if(player.activeSelf)
+            {
                 player.SetActive(false);
+            }
         }
         
         public void SwitchToPlayer()

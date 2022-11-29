@@ -51,18 +51,21 @@ public class Ai : MonoBehaviour
 
     private void Update()
     {
-        if (isChase)
+        try
         {
-            navMeshAgent.SetDestination(player.transform.position);
-            //TODO opravit rotaci transform.LookAt(player.transform.position);
-            //LookAtPlayer();
-        }
-        else
-        {
-            navMeshAgent.SetDestination(GetPointNearPlayer());
-            //TODO opravit rotaci transform.LookAt(temp);    
-            //LookAtPlayer();
-        }
+            if (isChase)
+            {
+                navMeshAgent.SetDestination(player.transform.position);
+                //TODO opravit rotaci transform.LookAt(player.transform.position);
+                //LookAtPlayer();
+            }
+            else
+            {
+                navMeshAgent.SetDestination(GetPointNearPlayer());
+                //TODO opravit rotaci transform.LookAt(temp);    
+                //LookAtPlayer();
+            }
+        }catch{}
 
         if (Vector3.Distance(transform.position, player.transform.position) <= gameOverDistance && isChase)    //gameover
         {
