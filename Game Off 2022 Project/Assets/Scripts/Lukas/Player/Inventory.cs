@@ -8,7 +8,7 @@ namespace Lukas.Player
     public class Inventory : MonoBehaviour
     {
         public static Inventory Instance;
-        private List<string> items = new List<string>();
+        [SerializeField] private List<string> items = new List<string>();
 
         private void Awake()
         {
@@ -27,7 +27,10 @@ namespace Lukas.Player
         {
             for(int i = 0; i < items.Count; i++)
                 if (items[i].Equals(item))
+                {
                     items.RemoveAt(i);
+                    return;
+                }
         }
         
         public bool CheckItem(string item)

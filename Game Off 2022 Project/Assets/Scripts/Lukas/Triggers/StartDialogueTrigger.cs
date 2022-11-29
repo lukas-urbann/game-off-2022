@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Lukas.Triggers
 {
-    public class StartDialogue : TriggerZone, ITriggerZone
+    public class StartDialogueTrigger : TriggerZone, ITriggerZone
     {
         [SerializeField] private Lukas.Story.Dialogue dialogue;
         

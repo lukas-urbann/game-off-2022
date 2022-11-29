@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using Lukas.Interactable;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -157,8 +159,17 @@ public class Crosshair : MonoBehaviour
 
     public void CallInteractableObject()
     {
+        //Dont do drugs kids
+        //Hele vole nech to tu byt, sice to těžce smrdí, ale *v tuto*
+        //chvíli už není čas to měnit
+        
         if (lukasObj != null)
-            lukasObj.Interact();
+        {
+            InteractableObject[] interactables = lukasObj.transform.GetComponents<InteractableObject>();
+
+            foreach (InteractableObject obj in interactables)
+            {obj.Interact();}
+        }
     }
 
     public Interactable Interactable()

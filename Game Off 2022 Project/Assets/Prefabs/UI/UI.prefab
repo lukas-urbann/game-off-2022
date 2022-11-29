@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 898239260}
   - component: {fileID: 898239259}
   - component: {fileID: 898239261}
+  - component: {fileID: 898239262}
   m_Layer: 5
   m_Name: Objective
   m_TagString: Untagged
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
+  m_enableWordWrapping: 0
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
   m_linkedTextComponent: {fileID: 0}
@@ -156,6 +157,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &898239262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898239257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 889cb235ecc33f941b000ae2a10432a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missionLabel: {fileID: 898239259}
+  missionAnimator: {fileID: 898239261}
 --- !u!1 &87175045250943243
 GameObject:
   m_ObjectHideFlags: 0

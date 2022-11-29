@@ -11,6 +11,7 @@ namespace Lukas.Animations
         public string animName;
         public Animator anim;
         public bool independent;
+        public bool requireItems;
 
         public void PlaySelectedAnimationIndependent()
         {
@@ -36,7 +37,13 @@ namespace Lukas.Animations
 
         public void PrivateInteraction()
         {
-            throw new System.NotImplementedException();
+            if(requireItems)
+                if (GetComponent<RemoveItem>() != null)
+                    return;
+            
+            Debug.Log("asdasdasdsad");
+            
+            PlaySelectedAnimation();
         }
     }
 }
