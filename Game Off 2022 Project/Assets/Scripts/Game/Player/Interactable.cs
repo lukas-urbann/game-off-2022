@@ -3,6 +3,7 @@ using cakeslice;
 using Scenes;
 using UnityEngine.SceneManagement;
 using Singletons;
+using Lukas.Interactable;
 
 [RequireComponent(typeof(Outline))]
 [RequireComponent(typeof(Collider))]
@@ -52,12 +53,19 @@ public class Interactable : MonoBehaviour
         {
             LoadingScreen.Instance.StartLoading(SceneManager.GetActiveScene().buildIndex + 1);
         }
+        else if (name.Equals("final table"))
+        {
+            Debug.LogError("DODĚLAT CUTSCENE");
+            LoadingScreen.Instance.StartLoading(SceneManager.GetActiveScene().buildIndex + 1);
+
+        }
         else if (name.Contains("_interactable"))
         {
-            if(GetComponent<Lukas.Interactable.InteractableObject>() != null)
-                GetComponent<Lukas.Interactable.InteractableObject>().Interact();
-            //opovaž se to vodsaď oddělat
-            
+            if(GetComponent<InteractableObject>() != null)   //opovaž se to vodsaď oddělat    unless? :troll:
+            {
+                GetComponent<InteractableObject>().Interact();
+            }
+               
             PlayerPrefs.SetInt(gameObject.name, 1); //"picking up" a object
             SFXController.Instance.PlayPickUp();
             gameObject.SetActive(false);
