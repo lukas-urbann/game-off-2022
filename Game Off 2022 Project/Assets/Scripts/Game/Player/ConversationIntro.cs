@@ -17,6 +17,13 @@ public class ConversationIntro : MonoBehaviour
         StartCoroutine(PlayVoiceLines());    
     }
 
+    private void Update()
+    {
+        //z nìjakého dùvodu se furt zobrazuje ten kurzor
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     private IEnumerator PlayVoiceLines()
     {
         PlayNextVoiceLine();    //waking up

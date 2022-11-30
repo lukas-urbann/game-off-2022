@@ -31,6 +31,7 @@ namespace Game.UI
             {
                 text = GetComponentInChildren(typeof(TMP_Text), true) as TMP_Text;
             }
+
             if (!button.interactable)
             {
                 text.color = disableColor;
@@ -45,8 +46,8 @@ namespace Game.UI
                 text.color = disableColor;
                 return;
             }
-            text.color = hoverColor;
 
+            text.color = hoverColor;
             if (BooleanChecker.CheckSFXController() && playSounds)
             {
                 SFXController.Instance.Button_PlayHover();
@@ -60,6 +61,7 @@ namespace Game.UI
                 text.color = disableColor;
                 return;
             }
+
             text.color = baseColor;
         }
 
@@ -70,8 +72,8 @@ namespace Game.UI
                 text.color = disableColor;
                 return;
             }
-            text.color = clickColor;
 
+            text.color = clickColor;
             if (BooleanChecker.CheckSFXController() && playSounds)
             {
                 SFXController.Instance.Button_PlayClick();
@@ -85,6 +87,7 @@ namespace Game.UI
                 text.color = disableColor;
                 return;
             }
+
             text.color = baseColor;
         }
     }

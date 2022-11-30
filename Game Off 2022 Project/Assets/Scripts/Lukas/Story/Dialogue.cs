@@ -20,7 +20,9 @@ namespace Lukas.Story
             timeSeparation.Capacity = audioLogs.Count;
 
             foreach (AudioClip audioLog in audioLogs)
+            {
                 timeSeparation.Add(audioLog.length);
+            }
         }
 
         private void Start()

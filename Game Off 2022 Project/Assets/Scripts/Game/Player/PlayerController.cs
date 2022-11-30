@@ -226,9 +226,13 @@ public class PlayerController : MonoBehaviour
                 SetWalkingState(WalkingState.exhausted);
             }
         }
-        
-        velocity.y += gravity * Time.deltaTime; //applying gravity
-        controller.Move(velocity * Time.deltaTime);
+
+        try
+        {
+            velocity.y += gravity * Time.deltaTime; //applying gravity
+            controller.Move(velocity * Time.deltaTime);
+        }
+        catch{}
     }
 
     private void DoZoom()

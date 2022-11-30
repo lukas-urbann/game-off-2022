@@ -61,8 +61,8 @@ namespace Scenes
         private void Start()
         {
             Time.timeScale = 1;
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
         }
 
         public void LoadLastLevel()

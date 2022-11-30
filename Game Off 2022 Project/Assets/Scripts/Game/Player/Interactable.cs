@@ -4,6 +4,7 @@ using Scenes;
 using UnityEngine.SceneManagement;
 using Singletons;
 using Lukas.Interactable;
+using UnityEngine.AI;
 
 [RequireComponent(typeof(Outline))]
 [RequireComponent(typeof(Collider))]
@@ -16,13 +17,12 @@ public class Interactable : MonoBehaviour
             Debug.Log("Player already has a" + name + ". Destroying radio gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
             gameObject.SetActive(false);
         }
-
         if (name.Equals("Baterkos") && PlayerPrefs.GetInt("Baterkos", 0) == 1) 
         {
             Debug.Log("Player already has a flashlight. Destroying flashlight gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
             gameObject.SetActive(false);
         }
-        else if (gameObject.name.Equals("Radios") && PlayerPrefs.GetInt("Radios", 0) == 1)
+        if (gameObject.name.Equals("Radios") && PlayerPrefs.GetInt("Radios", 0) == 1)
         {
             Debug.Log("Player already has a radio. Destroying radio gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
             gameObject.SetActive(false);
@@ -55,9 +55,11 @@ public class Interactable : MonoBehaviour
         }
         else if (name.Equals("final table"))
         {
-            Debug.LogError("DODĚLAT CUTSCENE");
-            LoadingScreen.Instance.StartLoading(SceneManager.GetActiveScene().buildIndex + 1);
-
+            GameObject w = GameObject.Find("Wrath");
+            w.GetComponent<NavMeshAgent>().enabled = false;
+            w.GetComponent<MeshCollider>().enabled = false;
+            GameObject.Find("Player").GetComponent<LastCutscene>().lerp = true;
+            
         }
         else if (name.Contains("_interactable"))
         {
