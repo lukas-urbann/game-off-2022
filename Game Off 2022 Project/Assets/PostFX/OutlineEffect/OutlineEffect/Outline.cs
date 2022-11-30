@@ -44,6 +44,8 @@ namespace cakeslice
 			SkinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
 			SpriteRenderer = GetComponent<SpriteRenderer>();
 			MeshFilter = GetComponent<MeshFilter>();
+
+			gameObject.tag = "Object";
 		}
 
 		void OnEnable()
