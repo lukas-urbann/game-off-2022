@@ -11,7 +11,7 @@ namespace Singletons
         public AudioClip pickUpSound; // ja te zabiju michale
 
         [SerializeField] private AudioClip buttonHover, buttonClick;
-        
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -26,7 +26,7 @@ namespace Singletons
 
         private void Start()
         {
-            AudioSource [] temp = GetComponents<AudioSource>();
+            AudioSource[] temp = GetComponents<AudioSource>();
             defaultAudioSource = temp[0];
 
             try //aspoň sem dej podmínku nebo něco tyvole všude mi to teď háže errory, stejně je to celé funky tohle
@@ -55,13 +55,13 @@ namespace Singletons
             defaultAudioSource.clip = clip;
             defaultAudioSource.Play();
         }
-        
+
         public void StopAudioSource()
         {
             defaultAudioSource.Stop();
             defaultAudioSource.clip = null;
         }
-        
+
         /// <summary>
         /// Plays an sound effect from given audio source
         /// </summary>
@@ -89,7 +89,7 @@ namespace Singletons
         {
             defaultAudioSource.PlayOneShot(buttonClick);
         }
-        
+
         public void Interactable_PlayPickUp()
         {
             defaultAudioSource.PlayOneShot(pickUpSound);
@@ -100,6 +100,9 @@ namespace Singletons
             try
             {
                 PlayerController.Instance.SetAudioListenerVolume(vol);
+            }
+            catch (NullReferenceException)
+            {
             }
             catch (Exception e)
             {

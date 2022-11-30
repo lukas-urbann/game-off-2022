@@ -827,6 +827,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crate
       objectReference: {fileID: 0}
+    - target: {fileID: 8999663263294456098, guid: be21bac52fca4dd46808a5953dbedd89, type: 3}
+      propertyPath: m_TagString
+      value: Object
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be21bac52fca4dd46808a5953dbedd89, type: 3}
 --- !u!4 &374445819 stripped
