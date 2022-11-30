@@ -583,7 +583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shader: {fileID: 4800000, guid: 95703b29f49b899499233ea7308bb800, type: 3}
-  BlockCount: 200
+  BlockCount: 512
 --- !u!1 &6700837621556723999
 GameObject:
   m_ObjectHideFlags: 0
@@ -727,6 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340b8232eab4ff94ca4229da10e24167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  items: []
 --- !u!1 &6700837621686087251
 GameObject:
   m_ObjectHideFlags: 0
