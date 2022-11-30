@@ -224,66 +224,74 @@ namespace cakeslice
 					{
 						Material m = null;
 
-						if (outline.SharedMaterials[v].HasProperty("_MainTex") && outline.SharedMaterials[v].mainTexture != null && outline.SharedMaterials[v])
+						try //vymdrané unity fr
 						{
-							foreach (Material g in materialBuffer)
+							if (outline.SharedMaterials[v].HasProperty("_MainTex") && outline.SharedMaterials[v].mainTexture != null && outline.SharedMaterials[v])
 							{
-								if (g.mainTexture == outline.SharedMaterials[v].mainTexture)
+								foreach (Material g in materialBuffer)
 								{
-									if (outline.eraseRenderer && g.color == outlineEraseMaterial.color)
-										m = g;
-									else if (!outline.eraseRenderer && g.color == GetMaterialFromID(outline.color).color)
-										m = g;
+									if (g.mainTexture == outline.SharedMaterials[v].mainTexture)
+									{
+										if (outline.eraseRenderer && g.color == outlineEraseMaterial.color)
+											m = g;
+										else if (!outline.eraseRenderer && g.color == GetMaterialFromID(outline.color).color)
+											m = g;
+									}
+								}
+
+								if (m == null)
+								{
+									if (outline.eraseRenderer)
+										m = new Material(outlineEraseMaterial);
+									else
+										m = new Material(GetMaterialFromID(outline.color));
+
+									m.mainTexture = outline.SharedMaterials[v].mainTexture;
+									materialBuffer.Add(m);
 								}
 							}
-
-							if (m == null)
+							else
 							{
 								if (outline.eraseRenderer)
-									m = new Material(outlineEraseMaterial);
+									m = outlineEraseMaterial;
 								else
-									m = new Material(GetMaterialFromID(outline.color));
-
-								m.mainTexture = outline.SharedMaterials[v].mainTexture;
-								materialBuffer.Add(m);
+									m = GetMaterialFromID(outline.color);
 							}
-						}
-						else
-						{
-							if (outline.eraseRenderer)
-								m = outlineEraseMaterial;
+
+							if (backfaceCulling)
+							{
+								m.SetInt("_Culling", (int)CullMode.Back);
+							}
 							else
-								m = GetMaterialFromID(outline.color);
-						}
-
-						if (backfaceCulling)
-							m.SetInt("_Culling", (int)UnityEngine.Rendering.CullMode.Back);
-						else
-							m.SetInt("_Culling", (int)UnityEngine.Rendering.CullMode.Off);
-
-						MeshFilter mL = outline.MeshFilter;
-						SkinnedMeshRenderer sMR = outline.SkinnedMeshRenderer;
-						SpriteRenderer sR = outline.SpriteRenderer;
-						if (mL)
-						{
-							if (mL.sharedMesh != null)
 							{
-								if (v < mL.sharedMesh.subMeshCount)
-									commandBuffer.DrawRenderer(outline.Renderer, m, v, 0);
+								m.SetInt("_Culling", (int)CullMode.Off);
+							}
+
+							MeshFilter mL = outline.MeshFilter;
+							SkinnedMeshRenderer sMR = outline.SkinnedMeshRenderer;
+							SpriteRenderer sR = outline.SpriteRenderer;
+							if (mL)
+							{
+								if (mL.sharedMesh != null)
+								{
+									if (v < mL.sharedMesh.subMeshCount)
+										commandBuffer.DrawRenderer(outline.Renderer, m, v, 0);
+								}
+							}
+							else if (sMR)
+							{
+								if (sMR.sharedMesh != null)
+								{
+									if (v < sMR.sharedMesh.subMeshCount)
+										commandBuffer.DrawRenderer(outline.Renderer, m, v, 0);
+								}
+							}
+							else if (sR)
+							{
+								commandBuffer.DrawRenderer(outline.Renderer, m, v, 0);
 							}
 						}
-						else if (sMR)
-						{
-							if (sMR.sharedMesh != null)
-							{
-								if (v < sMR.sharedMesh.subMeshCount)
-									commandBuffer.DrawRenderer(outline.Renderer, m, v, 0);
-							}
-						}
-						else if (sR)
-						{
-							commandBuffer.DrawRenderer(outline.Renderer, m, v, 0);
-						}
+						catch { }
 					}
 				}
 			}

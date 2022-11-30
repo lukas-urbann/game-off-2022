@@ -9,14 +9,7 @@ namespace cakeslice
     {
         bool pingPong = false;
 
-        // Use this for initialization
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
+        private void Update()
         {
             Color c = GetComponent<OutlineEffect>().lineColor0;
 
