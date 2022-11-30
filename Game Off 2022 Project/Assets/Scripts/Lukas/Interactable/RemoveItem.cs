@@ -9,7 +9,7 @@ namespace Lukas.Interactable
     public class RemoveItem : InteractableObject, IInteractableObject
     {
         [SerializeField] private string itemName;
-        private bool didRemoveItem = false;
+        //private bool didRemoveItem = false;
         public string itemNotFound = "";
         
         public override void PrivateInteraction()

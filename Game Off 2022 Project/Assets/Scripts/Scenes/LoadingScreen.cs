@@ -115,9 +115,9 @@ namespace Scenes
             Cursor.lockState = CursorLockMode.Locked;
             loadingScreenGameObject.SetActive(true);
             SFXController.Instance.StopAudioSource();
-            SFXController.Instance.SetMasterState(0);
+            //SFXController.Instance.SetMasterState(0);
             yield return new WaitForSecondsRealtime(3f);
-            SFXController.Instance.SetMasterState(1);
+            //SFXController.Instance.SetMasterState(1);
             Time.timeScale = 1;
             StartCoroutine(LoadAsynchronously(sceneName));
         }

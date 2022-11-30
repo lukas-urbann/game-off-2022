@@ -6025,7 +6025,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1771054854}
-  m_RootOrder: 31
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -28.036, z: 0}
 --- !u!4 &599095045 stripped
 Transform:
@@ -6441,6 +6441,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1771054854}
     m_Modifications:
+    - target: {fileID: 1908654418301393398, guid: 71a6497fe424ae745ae74570e704df56, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7469411723232358557, guid: 71a6497fe424ae745ae74570e704df56, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7394,10 +7398,6 @@ PrefabInstance:
     - target: {fileID: 6700837621556723999, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6700837621556723999, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
@@ -22334,6 +22334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableObject: 1
+  disableAfterInteraction: 0
   objectToEnable: {fileID: 992671559}
 --- !u!1 &1189420052
 GameObject:
@@ -27993,6 +27994,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 597665657}
   - {fileID: 1548511773}
   - {fileID: 644716457}
   - {fileID: 589951683}
@@ -28024,7 +28026,6 @@ Transform:
   - {fileID: 2012881507}
   - {fileID: 1024446456}
   - {fileID: 1855154717}
-  - {fileID: 597665657}
   - {fileID: 583555543}
   - {fileID: 2101417062}
   - {fileID: 861183355}
