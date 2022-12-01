@@ -5,7 +5,7 @@ namespace Lukas.Interactable
 {
     public class LightSwitch : InteractableObject, IInteractableObject
     {
-        [SerializeField] private new Light light;
+        [SerializeField] private Light lightSource;
         [SerializeField] private bool isOn = false;
         public AudioClip lightSwitch;
 
@@ -18,7 +18,7 @@ namespace Lukas.Interactable
         {
             SFXController.Instance.PlaySoundEffectOneShot(lightSwitch);
             isOn = !isOn;
-            light.enabled = isOn;
+            lightSource.enabled = isOn;
         }
     }
 }

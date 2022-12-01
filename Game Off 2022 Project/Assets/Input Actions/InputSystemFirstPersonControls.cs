@@ -417,7 +417,7 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 {
                     ""name"": """",
                     ""id"": ""6efc6c05-d5c0-4b0b-965c-88a6c89954f4"",
-                    ""path"": ""<Keyboard>/l"",
+                    ""path"": ""<Keyboard>/lightSource"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""FPSControllerInputs"",
