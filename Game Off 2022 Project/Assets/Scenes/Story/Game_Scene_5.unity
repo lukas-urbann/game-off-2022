@@ -892,6 +892,120 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7202037829269970160, guid: 5c9a51af876ab794b9a1bad379f13742, type: 3}
   m_PrefabInstance: {fileID: 238100734}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &271204507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 271204511}
+  - component: {fileID: 271204510}
+  - component: {fileID: 271204509}
+  - component: {fileID: 271204508}
+  - component: {fileID: 271204512}
+  m_Layer: 0
+  m_Name: Secret Ending
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!65 &271204508
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271204507}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &271204509
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271204507}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &271204510
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271204507}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &271204511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271204507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -17, y: -160.2, z: -175.50784}
+  m_LocalScale: {x: 648.11, y: 648.11, z: 648.11}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &271204512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 271204507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ad49705e9aae9c478c6038f6f21ecab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteAfterCollision: 1
+  missionText: Can you fucking choose already what the fuck, im gonna crash the game
+    in ten seconds, choose now
+  missionDisplayTime: 999999
 --- !u!1001 &351081499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -902,6 +1016,10 @@ PrefabInstance:
     - target: {fileID: 1936617985771751735, guid: 66d2527663b5f1740b18edcafdf84920, type: 3}
       propertyPath: m_Name
       value: SMAZ ME NAKONEC, OK_
+      objectReference: {fileID: 0}
+    - target: {fileID: 1936617985771751735, guid: 66d2527663b5f1740b18edcafdf84920, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7436705475430037074, guid: 66d2527663b5f1740b18edcafdf84920, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2179,41 +2297,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 898239259, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 898239259, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
     - target: {fileID: 4123775504741680189, guid: b4c64fcb88094b34180657685339e87b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 738258807}
     - target: {fileID: 4123775505037823324, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 4123775505037823324, guid: b4c64fcb88094b34180657685339e87b, type: 3}
       propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4123775505343976764, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 4123775505343976764, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4123775505654970956, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 4123775505654970956, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4123775505976121969, guid: b4c64fcb88094b34180657685339e87b, type: 3}
       propertyPath: m_Name
@@ -2303,49 +2393,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4123775506236202027, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 4123775506284824358, guid: b4c64fcb88094b34180657685339e87b, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4123775506284824358, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 4123775506284824358, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6988635935599111528, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 6988635935599111528, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7567048608365225045, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7567048608365225045, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7567048609644192210, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7567048609644192210, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7567048609772923188, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-    - target: {fileID: 7567048609772923188, guid: b4c64fcb88094b34180657685339e87b, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4c64fcb88094b34180657685339e87b, type: 3}
@@ -2682,6 +2732,7 @@ GameObject:
   - component: {fileID: 784345579}
   - component: {fileID: 784345578}
   - component: {fileID: 784345577}
+  - component: {fileID: 784345581}
   m_Layer: 0
   m_Name: blue pill
   m_TagString: Untagged
@@ -2768,6 +2819,20 @@ Transform:
   m_Father: {fileID: 1764812779}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &784345581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784345576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b0bdb0ffd09cd43b5b002d90818749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteAfterCollision: 1
+  sceneName: Game_Scene_GoodEnding
 --- !u!1 &792092426
 GameObject:
   m_ObjectHideFlags: 0
@@ -4149,6 +4214,7 @@ GameObject:
   - component: {fileID: 1193936120}
   - component: {fileID: 1193936119}
   - component: {fileID: 1193936118}
+  - component: {fileID: 1193936122}
   m_Layer: 0
   m_Name: red pill
   m_TagString: Untagged
@@ -4235,6 +4301,20 @@ Transform:
   m_Father: {fileID: 1764812779}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1193936122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193936117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0b0bdb0ffd09cd43b5b002d90818749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deleteAfterCollision: 1
+  sceneName: Game_Scene_BadEnding
 --- !u!1001 &1203742209
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5032,7 +5112,7 @@ GameObject:
   - component: {fileID: 1569458931}
   - component: {fileID: 1569458932}
   - component: {fileID: 1569458934}
-  - component: {fileID: 1569458933}
+  - component: {fileID: 1569458935}
   m_Layer: 0
   m_Name: Andrew Tate
   m_TagString: Untagged
@@ -5125,22 +5205,6 @@ MonoBehaviour:
     on the other hand, it sounds cool I'm not gonna lie.
   - Well and if I reject his offer, will anything be like before ?
   - So, what will it be, the choice is yours?
---- !u!114 &1569458933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1569458929}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a204a198a053ef940bc3ab747024b8b0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deleteAfterCollision: 0
-  animName: 
-  anim: {fileID: 0}
-  independent: 1
 --- !u!64 &1569458934
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5155,6 +5219,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &1569458935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569458929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 170ac6d6c7a490448bcc62af8ca2bb56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pillsAnim: {fileID: 1764812780}
+  secretEnding: {fileID: 271204507}
 --- !u!1 &1579120883
 GameObject:
   m_ObjectHideFlags: 0
@@ -5681,12 +5759,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1719959166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfa5dd5ad58249baacdc598c3e346781, type: 3}
+  m_Script: {fileID: 11500000, guid: 32e10406b35848545ac1be8c9bfac608, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deleteAfterCollision: 1
-  animationName: TateSpeak
-  animator: {fileID: 1569458931}
+  lmao: {fileID: 1569458935}
 --- !u!1 &1764812778
 GameObject:
   m_ObjectHideFlags: 0
@@ -6116,7 +6192,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 18428129417398184, guid: 88f1701e03cc5994ba39744e129e38b9, type: 2}
   m_audioClip: {fileID: 8300000, guid: b7170238934ae3f4f878bf1795399004, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.025
+  m_Volume: 0.018
   m_Pitch: 1
   Loop: 1
   Mute: 0

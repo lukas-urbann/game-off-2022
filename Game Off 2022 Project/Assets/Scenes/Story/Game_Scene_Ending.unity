@@ -445,8 +445,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 639, y: -5579}
-  m_SizeDelta: {x: 348.5393, y: 78.5332}
+  m_AnchoredPosition: {x: 598.3123, y: -5578.573}
+  m_SizeDelta: {x: 429.9193, y: 78.5332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &116624809
 MonoBehaviour:
@@ -1684,7 +1684,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'the guy who did nothing: Jakub'
+  m_text: 'the ""idea"" guy: Jakub'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1796,8 +1796,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 679.97, y: -5760.5}
-  m_SizeDelta: {x: 430.47, y: 441.6036}
+  m_AnchoredPosition: {x: 637, y: -5777}
+  m_SizeDelta: {x: 517.0168, y: 441.6036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &569794368
 MonoBehaviour:
@@ -1843,7 +1843,9 @@ MonoBehaviour:
     10. blue and red pill choice
 
     11. typical
-    unity game'
+    unity game
+
+    12. stupid end-game choice'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2394,7 +2396,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 723, y: -6438}
+  m_AnchoredPosition: {x: 724, y: -6372}
   m_SizeDelta: {x: 348.5393, y: 78.5332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &894208781
@@ -3388,7 +3390,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -733.73, y: -6438}
+  m_AnchoredPosition: {x: -733, y: -6367}
   m_SizeDelta: {x: 348.5393, y: 78.5332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105693616
@@ -3684,7 +3686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -223.72998, y: -6438}
+  m_AnchoredPosition: {x: -223, y: -6365}
   m_SizeDelta: {x: 348.5393, y: 78.5332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1186255575
@@ -4861,7 +4863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -228, y: -6530}
+  m_AnchoredPosition: {x: -227, y: -6454}
   m_SizeDelta: {x: 526.2394, y: 78.5332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564263500
@@ -5362,7 +5364,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -735, y: -6515.19}
+  m_AnchoredPosition: {x: -734, y: -6453}
   m_SizeDelta: {x: 526.2394, y: 106.211}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1713888470
@@ -5634,7 +5636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 718.73, y: -6530}
+  m_AnchoredPosition: {x: 720, y: -6450}
   m_SizeDelta: {x: 526.2394, y: 78.5332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760369553
@@ -5657,7 +5659,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: https://github.com/kyrkCZ
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6186,7 +6188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.6}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 241.27002, y: -6438}
+  m_AnchoredPosition: {x: 242, y: -6369}
   m_SizeDelta: {x: 348.5393, y: 78.5332}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1831668448
