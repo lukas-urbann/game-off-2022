@@ -6,6 +6,7 @@ namespace Lukas.Triggers
     public class TriggerZone : MonoBehaviour
     {
         [SerializeField] private bool deleteAfterCollision;
+        [SerializeField] private bool forceDeleteAfterCollision = false;
         
         private void OnTriggerEnter(Collider other)
         {
@@ -27,6 +28,9 @@ namespace Lukas.Triggers
                 //gameObject.SetActive(false); 
                 GetComponent<Collider>().enabled = false;
             }
+            
+            if(forceDeleteAfterCollision)
+                gameObject.SetActive(false);
         }
         
         public virtual void PrivateInteractionEnter() {}
