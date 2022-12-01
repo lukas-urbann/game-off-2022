@@ -87,18 +87,18 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Flashlight",
+                    "name": "Radio",
                     "type": "Button",
-                    "id": "b97085d0-19d2-48a8-a94c-449845f7d86f",
+                    "id": "9593ea83-80d6-447c-895b-2199f5809489",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Radio",
+                    "name": "Light",
                     "type": "Button",
-                    "id": "9593ea83-80d6-447c-895b-2199f5809489",
+                    "id": "13ebdb47-edc1-4421-a539-8386ec09f95f",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -394,28 +394,6 @@
                 },
                 {
                     "name": "",
-                    "id": "6efc6c05-d5c0-4b0b-965c-88a6c89954f4",
-                    "path": "<Keyboard>/l",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "FPSControllerInputs",
-                    "action": "Flashlight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "fbd47908-f0eb-4f1b-ab10-eaed74eec3b9",
-                    "path": "<Gamepad>/buttonNorth",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Flashlight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "f574c364-f922-479a-b2ad-87174ec8d88c",
                     "path": "<Keyboard>/q",
                     "interactions": "",
@@ -433,6 +411,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Radio",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4c007e30-8be7-4e32-a8d4-019bfae48048",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "FPSControllerInputs",
+                    "action": "Light",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "98aceeac-d436-4f07-91f3-003d300b7ce2",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Light",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
