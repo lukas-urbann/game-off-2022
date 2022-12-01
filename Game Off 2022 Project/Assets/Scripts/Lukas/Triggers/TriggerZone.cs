@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Lukas.Triggers
@@ -13,16 +10,23 @@ namespace Lukas.Triggers
         private void OnTriggerEnter(Collider other)
         {
             if(other.gameObject.CompareTag("Player"))
+            {                                   
                 PrivateInteractionEnter();
+            }
         }
         
         private void OnTriggerExit(Collider other)
         {
             if(other.gameObject.CompareTag("Player"))
+            {
                 PrivateInteractionExit();
+            }
             
             if(deleteAfterCollision)
-                gameObject.SetActive(false);
+            {
+                //gameObject.SetActive(false); 
+                GetComponent<Collider>().enabled = false;
+            }
         }
         
         public virtual void PrivateInteractionEnter() {}

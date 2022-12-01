@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 public class Ai : MonoBehaviour
 {
@@ -65,7 +67,7 @@ public class Ai : MonoBehaviour
                 //TODO opravit rotaci transform.LookAt(temp);    
                 //LookAtPlayer();
             }
-        }catch{}
+        }catch(Exception){}
 
         if (Vector3.Distance(transform.position, player.transform.position) <= gameOverDistance && isChase)    //gameover
         {

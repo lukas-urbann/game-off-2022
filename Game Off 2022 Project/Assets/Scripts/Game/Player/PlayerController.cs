@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using System.Collections.Generic;
 using UnityEngine.Rendering.PostProcessing;
+using System;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
@@ -186,12 +187,20 @@ public class PlayerController : MonoBehaviour
             {
                 currentStamina += Time.deltaTime;
                 SetWalkingState(WalkingState.running);
-                controller.Move(move * movementSpeed * Time.deltaTime * sprintMultiplier);
+                try
+                {
+                    controller.Move(move * movementSpeed * Time.deltaTime * sprintMultiplier);
+                }
+                catch (Exception) { }
             }
             else   //Walking
             {
                 SetWalkingState(WalkingState.walking);
-                controller.Move(move * movementSpeed * Time.deltaTime);
+                try
+                {
+                    controller.Move(move * movementSpeed * Time.deltaTime);
+                }
+                catch (Exception) { }
             }
         }
         else if (currentWalkingState != WalkingState.exhausted)

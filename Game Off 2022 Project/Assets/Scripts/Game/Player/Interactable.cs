@@ -12,7 +12,7 @@ public class Interactable : MonoBehaviour
 {
     private void Awake()
     {
-        if (name.Contains("_interactable") && PlayerPrefs.GetInt(name, 0) == 1)
+        /*if (name.Contains("_interactable") && PlayerPrefs.GetInt(name, 0) == 1)
         {
             Debug.Log("Player already has a" + name + ". Destroying radio gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
             gameObject.SetActive(false);
@@ -26,7 +26,7 @@ public class Interactable : MonoBehaviour
         {
             Debug.Log("Player already has a radio. Destroying radio gameobject...\nIf you wish to reset player progress, use the PlayerPrefs button, located at the top of the sreen");
             gameObject.SetActive(false);
-        }
+        }*/
     }
 
     public void Interact()

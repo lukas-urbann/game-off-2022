@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Lukas.Interactable
@@ -14,14 +11,16 @@ namespace Lukas.Interactable
 
         private void Start()
         {
-            if (ItemDescription.Equals("null") && GetComponent<global::Description>() != null)
-                ItemDescription = GetComponent<global::Description>().description;
+            if (ItemDescription.Equals("null") && GetComponent<Description>() != null)
+            {
+                ItemDescription = GetComponent<Description>().description;
+            }
 
             if (GetComponent<global::Interactable>() != null)
                 OverrideLegacy = false;
             
-            if (GetComponent<Lukas.Interactable.DescriptionLukas>() != null)
-                ItemDescription = GetComponent<Lukas.Interactable.DescriptionLukas>().SetItemDescription();
+            if (GetComponent<DescriptionLukas>() != null)
+                ItemDescription = GetComponent<DescriptionLukas>().SetItemDescription();
 
             if (ItemDescription.Equals("null"))
                 ItemDescription = "";

@@ -36,6 +36,6 @@ public class Machines : MonoBehaviour
 
     public void SetRequiredPotion()
     {
-        GetComponent<RemoveItem>().
+        //GetComponent<RemoveItem>().
     }
 }

@@ -15,7 +15,7 @@ namespace Scenes
         [SerializeField] private TMP_Text tipOfTheDay;
         [SerializeField] private List<string> clicheString = new List<string>();
         [SerializeField] private DiscordController discordController;
-        
+
         private void Awake()
         {
             if (Instance != null && Instance != this)
@@ -114,10 +114,22 @@ namespace Scenes
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
             loadingScreenGameObject.SetActive(true);
-            SFXController.Instance.StopAudioSource();
-            //SFXController.Instance.SetMasterState(0);
+            try
+            {
+                SFXController.Instance.StopAudioSource();
+            }
+            catch { }
+            try
+            {
+                SFXController.Instance.SetMasterState(0);
+            }
+            catch { }
             yield return new WaitForSecondsRealtime(3f);
-            //SFXController.Instance.SetMasterState(1);
+            try
+            {
+                SFXController.Instance.SetMasterState(1);
+            }
+            catch { }
             Time.timeScale = 1;
             StartCoroutine(LoadAsynchronously(sceneName));
         }
