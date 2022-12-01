@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    private float timeRemaining = 180;
+    private float timeRemaining = 55;
     private string timeRemainingString = "XXX";
     private TMP_Text timeRemainingText;
+    public GameObject asdfaafs;
 
     public GameObject player, gameOverScreen;
 
@@ -19,6 +20,12 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
+        if (asdfaafs.activeSelf)
+        {
+            timeRemainingText.gameObject.SetActive(false);
+            gameObject.SetActive(false);
+        }
+        
         if (timeRemaining <= 0)
         {
             //End.GameOver();

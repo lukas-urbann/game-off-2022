@@ -2,25 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Lukas.Interactable;
+using Lukas.Objective;
+using Lukas.Player;
 using UnityEngine;
 
-public class Machines : MonoBehaviour
+public class Machines : InteractableObject
 {
-    public GameObject bottle, smoke;
+    public GameObject smoke;
     public bool isWorking = false;
-    
-    public enum ColorType
-    {
-        Red,
-        Green,
-        Yellow,
-        Purple,
-        Blue
-    }
-
-    public ColorType machineType;
-    public ColorType requiredPotionType;
-    public ColorType returnType;
+    public string requiredItem = "";
+    public GameObject item;
 
     private void Update()
     {
@@ -34,8 +25,38 @@ public class Machines : MonoBehaviour
         }
     }
 
-    public void SetRequiredPotion()
+    private void Cook()
     {
+        isWorking = true;
+        StartCoroutine(Asd());
+    }
+
+    private IEnumerator Asd()
+    {
+        yield return new WaitForSeconds(10);
+        CreatePotion();
+    }
+
+    public void CreatePotion()
+    {
+<<<<<<< Updated upstream
         //GetComponent<RemoveItem>().
+=======
+        item.SetActive(true);
+        isWorking = false;
+    }
+
+    public override void PrivateInteraction()
+    {
+        if (Inventory.Instance.CheckItem(requiredItem))
+        {
+            Inventory.Instance.RemoveItem(requiredItem);
+            Cook();
+        }
+        else
+        {
+            Mission.Instance.UpdateMission("You need to put [" + requiredItem + "] into this machine!", 3);
+        }
+>>>>>>> Stashed changes
     }
 }
