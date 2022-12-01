@@ -66,6 +66,8 @@ public class PlayerController : MonoBehaviour
     #region Unity Functions
     private void Awake()
     {
+        lookSensitivity = PlayerPrefs.GetFloat("sens", 4);
+
         //cam = Camera.main; Tohle tu být nemůže kvůli tomu jak se přepínaj cutscény
         inputActions = new InputSystemFirstPersonControls();
 
