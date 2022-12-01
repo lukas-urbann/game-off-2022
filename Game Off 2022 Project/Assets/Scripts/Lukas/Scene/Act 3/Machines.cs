@@ -39,9 +39,6 @@ public class Machines : InteractableObject
 
     public void CreatePotion()
     {
-<<<<<<< Updated upstream
-        //GetComponent<RemoveItem>().
-=======
         item.SetActive(true);
         isWorking = false;
     }
@@ -57,6 +54,5 @@ public class Machines : InteractableObject
         {
             Mission.Instance.UpdateMission("You need to put [" + requiredItem + "] into this machine!", 3);
         }
->>>>>>> Stashed changes
     }
 }
