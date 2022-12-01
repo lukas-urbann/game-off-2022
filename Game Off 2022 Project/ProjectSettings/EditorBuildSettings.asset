@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Story/Game_Scene_GoodEnding.unity
     guid: 38b03df4ae548e143b884d09d79908a4
   - enabled: 1
+    path: Assets/Scenes/Story/Game_Scene_BadEnding.unity
+    guid: 2243d275d4310f743bb75ccd597d039f
+  - enabled: 1
     path: Assets/Scenes/Story/Game_Scene_Ending.unity
     guid: 5d4d6482e0d13f442821a6257b302cb6
   m_configObjects:
