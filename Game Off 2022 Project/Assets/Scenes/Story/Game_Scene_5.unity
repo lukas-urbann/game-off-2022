@@ -1003,6 +1003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  forceDeleteAfterCollision: 0
   missionText: Can you fucking choose already what the fuck, im gonna crash the game
     in ten seconds, choose now
   missionDisplayTime: 999999
@@ -2517,6 +2518,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 79076906}
     m_Modifications:
+    - target: {fileID: 417769034938573020, guid: 2decc4f1e9ebb604c9def23a96e225f6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 417769034938573027, guid: 2decc4f1e9ebb604c9def23a96e225f6, type: 3}
       propertyPath: m_RootOrder
       value: 69
@@ -2832,6 +2837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  forceDeleteAfterCollision: 0
   sceneName: Game_Scene_GoodEnding
 --- !u!1 &792092426
 GameObject:
@@ -4314,6 +4320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  forceDeleteAfterCollision: 0
   sceneName: Game_Scene_BadEnding
 --- !u!1001 &1203742209
 PrefabInstance:
@@ -4553,6 +4560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  forceDeleteAfterCollision: 0
   missionText: Go along the path, thanks
   missionDisplayTime: 6
 --- !u!65 &1354097578
@@ -4702,6 +4710,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 79076906}
     m_Modifications:
+    - target: {fileID: 417769034938573020, guid: 2decc4f1e9ebb604c9def23a96e225f6, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 417769034938573027, guid: 2decc4f1e9ebb604c9def23a96e225f6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -5671,7 +5683,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  forceDeleteAfterCollision: 0
   dialogue: {fileID: 1569458932}
+  pomoc: 0
 --- !u!65 &1719959168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5850,7 +5864,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  forceDeleteAfterCollision: 0
   dialogue: {fileID: 662024649}
+  pomoc: 0
 --- !u!65 &1782895962
 BoxCollider:
   m_ObjectHideFlags: 0

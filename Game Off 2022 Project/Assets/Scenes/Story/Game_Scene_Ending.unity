@@ -1987,7 +1987,11 @@ MonoBehaviour:
     11. typical
     unity game
 
-    12. stupid end-game choice'
+    12. stupid end-game choice
+
+    13. low stamina
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6739,7 +6743,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1799321584}
-  - component: {fileID: 1799321585}
   - component: {fileID: 1799321586}
   m_Layer: 0
   m_Name: Music Controller
@@ -6763,21 +6766,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1799321585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1799321583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68b5e9a932507084c9c38621d81bf0d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pickUpSound: {fileID: 0}
-  buttonHover: {fileID: 8300000, guid: 82735e57c4047f94880cca37c045e557, type: 3}
-  buttonClick: {fileID: 8300000, guid: c635bc3fac7df3742af85a8dbaaf0949, type: 3}
 --- !u!82 &1799321586
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6787,7 +6775,7 @@ AudioSource:
   m_GameObject: {fileID: 1799321583}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 18428129417398184, guid: 88f1701e03cc5994ba39744e129e38b9, type: 2}
   m_audioClip: {fileID: 8300000, guid: 46af9364cce92ed4983117bde096f83c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

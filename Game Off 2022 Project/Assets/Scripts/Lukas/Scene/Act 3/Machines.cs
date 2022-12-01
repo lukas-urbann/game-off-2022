@@ -35,6 +35,9 @@ public class Machines : InteractableObject
     {
         yield return new WaitForSeconds(10);
         CreatePotion();
+        isWorking = false;
+        GetComponent<cakeslice.Outline>().enabled = false;
+        gameObject.tag = "Untagged";
     }
 
     public void CreatePotion()

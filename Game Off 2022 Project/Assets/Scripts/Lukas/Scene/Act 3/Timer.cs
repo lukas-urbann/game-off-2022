@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    private float timeRemaining = 55;
+    private float timeRemaining = 69;
     private string timeRemainingString = "XXX";
     private TMP_Text timeRemainingText;
     public GameObject asdfaafs;

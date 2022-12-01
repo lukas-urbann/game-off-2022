@@ -235,7 +235,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &202336358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11386,6 +11386,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemDescription: Meth.. er I mean crystals
+--- !u!114 &975091056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975091045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49afae073078d1f4faf082731b54eb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableOnInteract: 0
+  missionText: JUMP OUT OF THE WINDOW, NOW!
 --- !u!1 &1003666952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6620472795390993404, guid: 35e9cd97f4603844a81a0a19f6131dec, type: 3}
@@ -11882,7 +11896,7 @@ GameObject:
   - component: {fileID: 1303507876}
   m_Layer: 0
   m_Name: Red Machine
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18314,7 +18328,7 @@ GameObject:
   - component: {fileID: 2050198830}
   m_Layer: 0
   m_Name: Green Machine
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18448,7 +18462,7 @@ GameObject:
   - component: {fileID: 2109512128}
   m_Layer: 0
   m_Name: Blue Machine
-  m_TagString: Untagged
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

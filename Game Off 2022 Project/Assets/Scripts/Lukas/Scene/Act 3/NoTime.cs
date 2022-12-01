@@ -17,7 +17,7 @@ public class NoTime : MonoBehaviour
     private IEnumerator Fuck()
     {
         //yield return new WaitForSeconds(82);
-        yield return new WaitForSeconds(82);
+        yield return new WaitForSeconds(1);
         Spawn();
     }
 
