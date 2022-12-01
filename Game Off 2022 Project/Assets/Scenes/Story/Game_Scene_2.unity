@@ -1026,7 +1026,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  forceDeleteAfterCollision: 0
   dialogue: {fileID: 1546017762}
+  pomoc: 0
 --- !u!1001 &92213309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4294,6 +4296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  forceDeleteAfterCollision: 0
   PlayOneShot: 0
   clip: {fileID: 8300000, guid: 40f2040bd9829de44960870a04daa6bd, type: 3}
 --- !u!114 &337847718
@@ -4309,6 +4312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  forceDeleteAfterCollision: 1
   animName: WindowBreak
   anim: {fileID: 3450882817331803860}
   independent: 0
@@ -5249,6 +5253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 1
+  forceDeleteAfterCollision: 1
   PlayOneShot: 0
   clip: {fileID: 8300000, guid: 42edc112e2c48cd458c694d5e845139c, type: 3}
 --- !u!65 &408186425
@@ -11702,6 +11707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 0
+  forceDeleteAfterCollision: 0
   animName: ItemThrow
   anim: {fileID: 1974946500}
   independent: 1
@@ -24245,6 +24251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 0
+  forceDeleteAfterCollision: 0
   PlayOneShot: 1
   clip: {fileID: 8300000, guid: ecf435926acf2f7498de8517b0d2fd97, type: 3}
 --- !u!65 &1974946502
@@ -27587,6 +27594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 0
+  forceDeleteAfterCollision: 0
   PlayOneShot: 1
   clip: {fileID: 8300000, guid: ecf435926acf2f7498de8517b0d2fd97, type: 3}
 --- !u!114 &3450882817331803864
@@ -27602,6 +27610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deleteAfterCollision: 0
+  forceDeleteAfterCollision: 0
   animName: TrumpAppear
   anim: {fileID: 988114423}
   independent: 1
