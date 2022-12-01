@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Lukas.Interactable;
 using UnityEngine;
 
 public class Machines : MonoBehaviour
@@ -19,4 +21,21 @@ public class Machines : MonoBehaviour
     public ColorType machineType;
     public ColorType requiredPotionType;
     public ColorType returnType;
+
+    private void Update()
+    {
+        if (isWorking)
+        {
+            smoke.SetActive(true);
+        }
+        else
+        {
+            smoke.SetActive(false);
+        }
+    }
+
+    public void SetRequiredPotion()
+    {
+        GetComponent<RemoveItem>().
+    }
 }
