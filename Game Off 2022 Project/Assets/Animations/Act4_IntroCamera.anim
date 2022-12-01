@@ -119,14 +119,14 @@ AnimationClip:
         time: 2.5
         value: {x: 4.95, y: 5.51, z: -92.54164}
         inSlope: {x: 6.2625, y: -9.449999, z: 0.06508828}
-        outSlope: {x: 0.29389763, y: 0.873333, z: 0.06248474}
+        outSlope: {x: 0.26000023, y: -0.0053335824, z: -0.05224101}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 4
-        value: {x: 5.3908463, y: 6.8199997, z: -92.447914}
+        value: {x: 5.34, y: 5.502, z: -92.62}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -144,7 +144,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 5
+        value: 1.2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -152,10 +152,10 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 3.3333333
-        value: 5
-        inSlope: 0
-        outSlope: 0
+        time: 2.5166667
+        value: 1
+        inSlope: -0.20000005
+        outSlope: -0.20000005
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -172,8 +172,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Range
-    path: 
+    attribute: m_Intensity
+    path: Area Light
     classID: 108
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -199,8 +199,8 @@ AnimationClip:
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 0
-      attribute: 514968105
+      path: 2453178349
+      attribute: 898800009
       script: {fileID: 0}
       typeID: 108
       customType: 25
@@ -270,14 +270,14 @@ AnimationClip:
         time: 2.5
         value: 4.95
         inSlope: 6.2625
-        outSlope: 0.29389763
+        outSlope: 0.26000023
         tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: 5.3908463
+        value: 5.34
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -334,14 +334,14 @@ AnimationClip:
         time: 2.5
         value: 5.51
         inSlope: -9.449999
-        outSlope: 0.873333
+        outSlope: -0.0053335824
         tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: 6.8199997
+        value: 5.502
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -398,14 +398,14 @@ AnimationClip:
         time: 2.5
         value: -92.54164
         inSlope: 0.06508828
-        outSlope: 0.06248474
+        outSlope: -0.05224101
         tangentMode: 69
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 4
-        value: -92.447914
+        value: -92.62
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -616,7 +616,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 5
+        value: 1.2
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -624,10 +624,10 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 3.3333333
-        value: 5
-        inSlope: 0
-        outSlope: 0
+        time: 2.5166667
+        value: 1
+        inSlope: -0.20000005
+        outSlope: -0.20000005
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -644,8 +644,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Range
-    path: 
+    attribute: m_Intensity
+    path: Area Light
     classID: 108
     script: {fileID: 0}
   m_EulerEditorCurves:

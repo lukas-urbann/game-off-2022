@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 202336360}
   - component: {fileID: 202336359}
   - component: {fileID: 202336358}
+  - component: {fileID: 202336362}
   m_Layer: 5
   m_Name: Ohio
   m_TagString: Untagged
@@ -211,8 +212,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202336357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 56.3}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: 36.4}
+  m_LocalScale: {x: -0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 941320906}
@@ -222,9 +223,22 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 13.9}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &202336362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202336357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb2d06e4cffd794f8eb6589e59b0994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 806482458}
 --- !u!1001 &307231216
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -325,16 +339,16 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 316722667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4.2351, y: 4.2351, z: 4.2351}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1266964058}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1016, y: -254}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -200, y: -200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &316722669
@@ -634,6 +648,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4123775506236202027, guid: b4c64fcb88094b34180657685339e87b, type: 3}
   m_PrefabInstance: {fileID: 511800526}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &806482458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6700837621556723999, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
+  m_PrefabInstance: {fileID: 307231216}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &941320905
 GameObject:
   m_ObjectHideFlags: 0
@@ -910,6 +929,7 @@ GameObject:
   - component: {fileID: 1266964057}
   - component: {fileID: 1266964056}
   - component: {fileID: 1266964055}
+  - component: {fileID: 1266964059}
   m_Layer: 5
   m_Name: Explanation
   m_TagString: Untagged
@@ -986,10 +1006,11 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266964054}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.00000035762784}
-  m_LocalPosition: {x: 0, y: 0, z: -135.7}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: 0, y: 0, z: -148.5}
+  m_LocalScale: {x: -0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1972180464}
   - {fileID: 1597143992}
   - {fileID: 316722668}
   m_Father: {fileID: 0}
@@ -998,8 +1019,21 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -0, y: 0}
-  m_SizeDelta: {x: 2500, y: 1000}
+  m_SizeDelta: {x: 1500, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1266964059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266964054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb2d06e4cffd794f8eb6589e59b0994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 806482458}
 --- !u!1001 &1385965400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1088,7 +1122,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1266964058}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1122,7 +1156,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1131,31 +1165,29 @@ MonoBehaviour:
   m_Text: "But realistically, we just ran out of budget.\r\nSo here's what should
     have happened in this level:\r\n\r\nAct 3: School\r\nThe player is somewhere
     in the middle of a classroom. He's crawled through a window. The school is going
-    to be fairly closed, so much \r\nI'm not really going to model. He'll have to
-    find a combination for the lock to the maintenance room \r\nroom, where the keys
-    to the entire building are, so he can get the necessary supplies \r\nfor making
-    meth or whatever the final product is. He's going to be advised on the process
-    as well. \r\nhomeless guy, we'll write more precise dialogue when we get to the
-    ingame. First he'll have to search \r\nthe director's cabin. He'll have to find
-    the spare keys for that hidden in the school. From there. \r\nhe'll find out
-    which classroom he needs to get to. The homeless guy will talk to him about some
-    trippy \r\nstuff and there just has to be dialogue. Then the homeless guy tells
-    him he sees a patrol \r\nof cops outside the school, that the player probably
-    set off the alarm. (Realistically, we can put stealth in here \r\nsequence or
-    it could just be fake, depending on how we prosecute. The truth is that even
-    if \r\nwe tell the cops to watch out, a large percentage of players will be afraid.)
-    Once they find out that \r\nthere's a code lock on the door, they'll have to
-    go find the code. This is where it's gonna be \r\njust free roam around the school.
-    Once he finds the code and enters it, he'll get into the classroom.\r\nHere's
-    the important part - the player will have to search for ingredients to cook special
-    \r\ncrystals. Since the player won't know what to do, the homeless man will tell
-    him the iconic \r\n- it's better if we split up. Practically the player will
-    have to invent the recipe himself, \r\nthat will be posted somewhere and search
-    for the ingredients scattered around the school. And cook \r\ncrystals. Once
-    he's done, he'll call the homeless guy and he'll confirm. He'll say \r\nhe can't
-    go back through the main entrance and has to go out the other way. The player
-    climbs out the window to \r\nthe back of the school and the floor caves in underneath
-    him. He falls into the tunnels.\r\n"
+    to be fairly closed, I'm not really going to model the whole thing. He'll have
+    to find a combination for the lock to the maintenance room, where the keys to
+    the entire building are, so he can get the necessary supplies for making meth
+    or whatever the final product is. He's going to be advised on the process as
+    well by a homeless guy, we'll write more precise dialogue when we get to the
+    ingame.\r\n\nFirst he'll have to search the maintenance room. He'll have to find
+    the spare keys for that which are hidden in the school. From there he'll find
+    out which classroom he needs to get to. The homeless guy will talk to him about
+    some trippy stuff. Then the homeless guy tells player that he sees a patrol of
+    cops outside the school and that the player probably set off the alarm. (We can
+    realistically put a stealth sequence here or it can just be a fake, it depends
+    on how much time we have left.)\r\n\nOnce they find out that there's a code lock
+    on the door, they'll have to go find the code. This is where it's gonna be just
+    free roam around the school. Once he finds the code and enters it, he'll get
+    into the classroom.\r\n\nHere's the important part - the player will have to
+    search for ingredients to cook special crystals. Since the player won't know
+    what to do, the homeless man will tell him the iconic - it's better if we split
+    up. Practically the player will have to invent the recipe himself, that will
+    be posted somewhere and search for the ingredients scattered around the school.
+    And cook \rcrystals. \n\nOnce he's done, he'll call the homeless guy and he'll
+    confirm. He'll say he can't go back through the main entrance and has to go out
+    the other way. The player climbs out the window to the back of the school and
+    the floor caves in underneath him. He falls into the tunnels."
 --- !u!222 &1597143994
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1258,6 +1290,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1972180463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1972180464}
+  - component: {fileID: 1972180466}
+  - component: {fileID: 1972180465}
+  m_Layer: 5
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1972180464
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972180463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1266964058}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1972180465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972180463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1972180466
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972180463}
+  m_CullTransparentMesh: 1
 --- !u!1 &2000095756
 GameObject:
   m_ObjectHideFlags: 0

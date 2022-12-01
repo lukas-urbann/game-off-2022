@@ -55,6 +55,8 @@ public class Interactable : MonoBehaviour
         }
         else if (name.Equals("final table"))
         {
+            GetComponent<Description>().description = "";
+            GetComponent<Outline>().enabled = false;
             GameObject w = GameObject.Find("Wrath");
             w.GetComponent<NavMeshAgent>().enabled = false;
             w.GetComponent<MeshCollider>().enabled = false;
