@@ -46,7 +46,7 @@ public class Flashlight : MonoBehaviour
 
     private void Update()
     {
-        if (hasFlashlight && inputActions.FPSController.Flashlight.WasPressedThisFrame())   //switching the flashlight on/off
+        if (hasFlashlight && inputActions.FPSController.Light.WasPressedThisFrame())   //switching the flashlight on/off
         {
             audioSource.Play();
             baterkos.enabled = !baterkos.isActiveAndEnabled;

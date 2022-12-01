@@ -109,18 +109,18 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Flashlight"",
+                    ""name"": ""Radio"",
                     ""type"": ""Button"",
-                    ""id"": ""b97085d0-19d2-48a8-a94c-449845f7d86f"",
+                    ""id"": ""9593ea83-80d6-447c-895b-2199f5809489"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Radio"",
+                    ""name"": ""Light"",
                     ""type"": ""Button"",
-                    ""id"": ""9593ea83-80d6-447c-895b-2199f5809489"",
+                    ""id"": ""13ebdb47-edc1-4421-a539-8386ec09f95f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -416,28 +416,6 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6efc6c05-d5c0-4b0b-965c-88a6c89954f4"",
-                    ""path"": ""<Keyboard>/lightSource"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""FPSControllerInputs"",
-                    ""action"": ""Flashlight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""fbd47908-f0eb-4f1b-ab10-eaed74eec3b9"",
-                    ""path"": ""<Gamepad>/buttonNorth"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Flashlight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""f574c364-f922-479a-b2ad-87174ec8d88c"",
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
@@ -455,6 +433,28 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Radio"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4c007e30-8be7-4e32-a8d4-019bfae48048"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""FPSControllerInputs"",
+                    ""action"": ""Light"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""98aceeac-d436-4f07-91f3-003d300b7ce2"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Light"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -1131,8 +1131,8 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         m_FPSController_Jump = m_FPSController.FindAction("Jump", throwIfNotFound: true);
         m_FPSController_Pause = m_FPSController.FindAction("Pause", throwIfNotFound: true);
         m_FPSController_Interact = m_FPSController.FindAction("Interact", throwIfNotFound: true);
-        m_FPSController_Flashlight = m_FPSController.FindAction("Flashlight", throwIfNotFound: true);
         m_FPSController_Radio = m_FPSController.FindAction("Radio", throwIfNotFound: true);
+        m_FPSController_Light = m_FPSController.FindAction("Light", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -1214,8 +1214,8 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
     private readonly InputAction m_FPSController_Jump;
     private readonly InputAction m_FPSController_Pause;
     private readonly InputAction m_FPSController_Interact;
-    private readonly InputAction m_FPSController_Flashlight;
     private readonly InputAction m_FPSController_Radio;
+    private readonly InputAction m_FPSController_Light;
     public struct FPSControllerActions
     {
         private @InputSystemFirstPersonControls m_Wrapper;
@@ -1229,8 +1229,8 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         public InputAction @Jump => m_Wrapper.m_FPSController_Jump;
         public InputAction @Pause => m_Wrapper.m_FPSController_Pause;
         public InputAction @Interact => m_Wrapper.m_FPSController_Interact;
-        public InputAction @Flashlight => m_Wrapper.m_FPSController_Flashlight;
         public InputAction @Radio => m_Wrapper.m_FPSController_Radio;
+        public InputAction @Light => m_Wrapper.m_FPSController_Light;
         public InputActionMap Get() { return m_Wrapper.m_FPSController; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1267,12 +1267,12 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 @Interact.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnInteract;
-                @Flashlight.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnFlashlight;
-                @Flashlight.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnFlashlight;
-                @Flashlight.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnFlashlight;
                 @Radio.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnRadio;
                 @Radio.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnRadio;
                 @Radio.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnRadio;
+                @Light.started -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnLight;
+                @Light.performed -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnLight;
+                @Light.canceled -= m_Wrapper.m_FPSControllerActionsCallbackInterface.OnLight;
             }
             m_Wrapper.m_FPSControllerActionsCallbackInterface = instance;
             if (instance != null)
@@ -1304,12 +1304,12 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
-                @Flashlight.started += instance.OnFlashlight;
-                @Flashlight.performed += instance.OnFlashlight;
-                @Flashlight.canceled += instance.OnFlashlight;
                 @Radio.started += instance.OnRadio;
                 @Radio.performed += instance.OnRadio;
                 @Radio.canceled += instance.OnRadio;
+                @Light.started += instance.OnLight;
+                @Light.performed += instance.OnLight;
+                @Light.canceled += instance.OnLight;
             }
         }
     }
@@ -1447,8 +1447,8 @@ public partial class @InputSystemFirstPersonControls : IInputActionCollection2, 
         void OnJump(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
-        void OnFlashlight(InputAction.CallbackContext context);
         void OnRadio(InputAction.CallbackContext context);
+        void OnLight(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
