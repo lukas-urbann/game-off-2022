@@ -192,6 +192,7 @@ GameObject:
   - component: {fileID: 202336360}
   - component: {fileID: 202336359}
   - component: {fileID: 202336358}
+  - component: {fileID: 202336362}
   m_Layer: 5
   m_Name: Ohio
   m_TagString: Untagged
@@ -269,7 +270,7 @@ RectTransform:
   m_GameObject: {fileID: 202336357}
   m_LocalRotation: {x: -0, y: 0.9919768, z: -0, w: 0.1264202}
   m_LocalPosition: {x: 0, y: 0, z: -64.7}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalScale: {x: -0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 941320906}
@@ -282,6 +283,19 @@ RectTransform:
   m_AnchoredPosition: {x: 45, y: 0}
   m_SizeDelta: {x: 1000, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &202336362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 202336357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bb2d06e4cffd794f8eb6589e59b0994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 307231218}
 --- !u!1 &271289307
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,6 +347,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8cad11a92d7bab48813cabec5092edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  gameOverScreen: {fileID: 0}
 --- !u!114 &271289310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,6 +518,11 @@ PrefabInstance:
 --- !u!20 &307231217 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8607132669434240880, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
+  m_PrefabInstance: {fileID: 307231216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &307231218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6700837621686087251, guid: 52fa3977f6c00a14da59d665a6eb2e4d, type: 3}
   m_PrefabInstance: {fileID: 307231216}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &316722667
