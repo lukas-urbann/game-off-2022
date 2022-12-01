@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Object
+  - Radio
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - UI
   - POV
   - Environment
-  - 
-  - 
+  - Door
+  - Interactable
   - 
   - 
   - 

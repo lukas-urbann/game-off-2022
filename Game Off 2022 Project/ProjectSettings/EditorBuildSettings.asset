@@ -9,6 +9,34 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: 816140a4307ffde44937349847b1be4d
-  m_configObjects: {}
+    path: Assets/Scenes/Story/Game_Scene_Intro.unity
+    guid: 6b3be30ba0849a94a94bef851f6944da
+  - enabled: 1
+    path: Assets/Scenes/Story/Game_Scene_1.unity
+    guid: 2ff5b11f33e0fe44fa2dc99ac7bfdf4a
+  - enabled: 1
+    path: Assets/Scenes/Story/Game_Scene_2.unity
+    guid: 2b6d7a098930b5046a33d8eee14e8746
+  - enabled: 1
+    path: Assets/Scenes/Story/Game_Scene_3.unity
+    guid: 394dcc2adb7822a49807ba6a29c67faa
+  - enabled: 1
+    path: Assets/Scenes/Story/Game_Scene_4.unity
+    guid: 527b2a5185504c14abdddce977b18b67
+  - enabled: 1
+    path: Assets/Scenes/Story/Game_Scene_5.unity
+    guid: 39447044ca51dcd4cb4ee7b5df6bd19e
+  - enabled: 1
+    path: Assets/Scenes/Story/Game_Scene_GoodEnding.unity
+    guid: 38b03df4ae548e143b884d09d79908a4
+  - enabled: 1
+    path: Assets/Scenes/Story/Game_Scene_BadEnding.unity
+    guid: 2243d275d4310f743bb75ccd597d039f
+  - enabled: 1
+    path: Assets/Scenes/Story/Game_Scene_Ending.unity
+    guid: 5d4d6482e0d13f442821a6257b302cb6
+  - enabled: 1
+    path: Assets/Scenes/Story/Game_Scene_Extra.unity
+    guid: 442894c2953c76f46a95ce931483eee6
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 9f2774294b7437c409ef5bd9a03ae4aa, type: 2}
